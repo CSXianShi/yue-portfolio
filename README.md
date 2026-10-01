@@ -44,6 +44,6 @@ caption: "你自己确认过的标题、日期或地点"
 
 本仓库使用 GitHub Pages 免费静态托管。部署源为 `main` 分支根目录，`.nojekyll` 保留原始静态文件。
 
-入口：[个人页面](https://csxianshi.github.io/yue-portfolio/)。GitHub 可能按账号既有的 Pages 域名跳转到最终地址。
+在线：[个人页面](https://blog.ultra-x.top/yue-portfolio/)。本项目沿用账号既有的 GitHub Pages 域名，仅部署在独立的 `/yue-portfolio/` 路径，不覆盖原博客。
 
 提交并推送网站文件后，GitHub Pages 会自动更新。仓库只包含网站展示文件，不包含电话服务代码、聊天记录、部署凭据或浏览器验收材料。
