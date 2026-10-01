@@ -31,3 +31,26 @@
 @media(max-width:600px){.collection-display{padding:36px 0}.collectible-grid{grid-template-columns:1fr;gap:26px}.collectible-copy{padding:24px}.collectible-copy h3{font-size:24px}.card-zoom{padding:22px}.collectible-copy dl{font-size:12px}.card-story{font-size:12px}.collection-display .section-heading>.small-label{display:none}.collection-download{gap:16px}.collection-download>.small-label{font-size:9px;line-height:2}}
 
 .card-image-kind{display:inline-block;margin-top:15px;padding:2px 9px;border:1px solid #aab69a;border-radius:20px;font-size:9px;color:var(--olive)}.card-image-kind+.card-zoom-label{margin-top:7px}.card-image-versions{display:flex;justify-content:center;gap:8px;background:#e2e5d9;padding:0 12px 19px}.card-image-versions button{border:1px solid #b3bda4;border-radius:20px;padding:6px 13px;background:transparent;color:var(--muted);font-size:10px}.card-image-versions button.is-active{background:var(--olive);border-color:var(--olive);color:var(--paper)}.card-download-links{display:flex;flex-direction:column;align-items:flex-start;gap:9px}.card-sources>span{display:block;margin-top:6px}
+
+/* A small, shared guestbook, styled like the rest of the fieldnotes. */
+.guestbook-section{border-top:1px solid var(--line);margin-top:60px;padding-bottom:20px}
+.guestbook-intro{display:flex;align-items:center;gap:18px;margin-bottom:25px}
+.guestbook-intro p{font-size:12px;color:var(--muted);margin:0}
+.guestbook-intro .pill{flex-shrink:0}
+.guestbook-panel{padding:30px;background:#efede4;border:1px solid var(--line);border-radius:var(--radius);min-height:240px}
+.guestbook-status{font-size:13px;color:var(--muted);margin:0 0 12px}
+.guestbook-footnote{font-size:10px;color:var(--muted);margin:18px 0 0}
+#guestbook-comments{--at-color-font:var(--ink);--at-color-deep:var(--ink);--at-color-sub:var(--muted);--at-color-grey:var(--muted);--at-color-meta:var(--muted);--at-color-border:var(--line);--at-color-light:var(--olive);--at-color-bg:#f9f7f1;--at-color-bg-grey:#e7e9dc;--at-color-bg-light:#e2e6d6;--at-color-main:var(--olive);--at-color-gradient:linear-gradient(180deg,transparent,#f9f7f1);font-family:var(--sans);font-size:13px}
+#guestbook-comments .atk-main-editor{border-radius:var(--radius);background:#f9f7f1}
+#guestbook-comments .atk-main-editor>.atk-header{border-bottom:1px solid var(--line);padding:7px 14px}
+#guestbook-comments .atk-header input[name="name"]{width:100%;max-width:none;font-family:var(--sans);font-size:13px;flex:1}
+#guestbook-comments .atk-textarea{min-height:130px;font-family:var(--sans);font-size:13px;line-height:1.9}
+#guestbook-comments .atk-send-btn{border-radius:var(--radius);padding:10px 18px;font-family:var(--sans);font-size:12px}
+#guestbook-comments textarea:focus-visible{outline:2px solid var(--rust);outline-offset:-3px}
+#guestbook-comments .atk-list{margin-top:26px}
+#guestbook-comments .atk-comment{padding:18px 0;overflow-wrap:anywhere}
+#guestbook-comments .atk-comment>.atk-avatar img{width:36px;height:36px;background:#e7e9dc;padding:8px}
+#guestbook-comments .atk-comment>.atk-main{margin-left:49px}
+#guestbook-comments .atk-list-footer{font-size:10px}
+@media(max-width:600px){.site-header nav{gap:14px;white-space:nowrap}.guestbook-section{margin-top:40px}.guestbook-intro{align-items:flex-start;flex-direction:column;gap:12px}.guestbook-intro p{font-size:11px}.guestbook-panel{padding:17px 13px}.guestbook-footnote{font-size:9px;line-height:1.9}}
+@media(max-width:360px){.site-header{gap:8px}.site-header nav{gap:10px;font-size:10px}.wordmark{gap:5px;font-size:18px}}

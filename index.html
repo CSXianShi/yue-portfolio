@@ -7,15 +7,17 @@
   <meta name="description" content="樾的个人空间：用技术探索生活，用摄影记录观察。项目、摄影与持续发生的好奇心。">
   <title>樾 Yuè — 项目与观察</title>
   <link rel="icon" type="image/svg+xml" href="assets/mark.svg">
-  <link rel="stylesheet" href="styles.css?v=card-correction-20261001">
+  <link rel="stylesheet" href="assets/vendor/artalk/Artalk.css?v=2.10.0">
+  <link rel="stylesheet" href="styles.css?v=guestbook-20261001">
   <script src="content.js?v=shanghai-five-20261001" defer></script>
   <script src="app.js?v=shanghai-20261001" defer></script>
+  <script src="guestbook.js?v=guestbook-20261001" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
   <header class="site-header wrap">
     <a class="wordmark" href="./" aria-label="樾的首页"><span class="brand-mark" aria-hidden="true">樾</span><span>YUÈ<span class="wordmark-small">A PERSONAL SPACE</span></span></a>
-    <nav aria-label="主要导航"><a href="#projects">项目</a><a href="#photography">摄影</a><a href="#about">关于我</a></nav>
+    <nav aria-label="主要导航"><a href="#projects">项目</a><a href="#photography">摄影</a><a href="#about">关于我</a><a href="#guestbook">留言板</a></nav>
     <span class="header-note"><i class="status-dot" aria-hidden="true"></i> 还在探索，也在成长</span>
   </header>
   <main id="main">
@@ -63,6 +65,17 @@
     <section id="about" class="section wrap about-section" aria-labelledby="about-title">
       <div class="about-head"><p class="eyebrow">03 / THE PERSON BEHIND IT</p><h2 id="about-title">你好，<br>我是<span data-content="name">樾</span><span class="accent">。</span></h2><span class="about-signature" aria-hidden="true">Still figuring things out.</span></div>
       <div class="about-copy"><p class="about-lead">喜欢把生活里的小问题，<br>变成值得动手试试的想法。</p><p>我现在是一名高中生。喜欢摄影，也对技术能怎样融入日常生活感到好奇。一个电话助手、一张照片，都是我理解世界的一种方式。</p><p>这个网站不是一份已经完成的答案，而是一份持续更新的记录。接下来，我想继续学习、尝试，把真正关心的事情做得更好。</p><div class="interest-list"><span>动手探索</span><span>摄影与观察</span><span>保持好奇</span></div><div class="next-note"><span class="tiny-cross" aria-hidden="true">✳</span><div><strong>接下来的一小步</strong><p>继续记录新的摄影作品，为电话助手留下更完整的项目记录，也慢慢整理兰多卡牌收藏。</p></div></div></div>
+    </section>
+    <section id="guestbook" class="section wrap guestbook-section" aria-labelledby="guestbook-title">
+      <div class="section-heading"><div><p class="eyebrow">04 / A NOTE FROM YOU</p><h2 id="guestbook-title">路过的话，留句话。</h2></div><p class="section-aside">一个想法、一句招呼，<br>或聊聊我们共同的喜欢。</p></div>
+      <div class="guestbook-intro"><span class="pill">公开留言 · 无需注册</span><p>填个昵称就能写，也可以回复和点赞。很高兴在这里遇见你。</p></div>
+      <div class="guestbook-panel">
+        <p id="guestbook-status" class="guestbook-status" role="status">正在翻开留言本……</p>
+        <button id="guestbook-retry" class="text-link" type="button" hidden>重新连接 ↻</button>
+        <div id="guestbook-comments" aria-label="留言与回复"></div>
+        <noscript><p class="guestbook-status">开启浏览器的 JavaScript，就能查看和留下留言。</p></noscript>
+      </div>
+      <p class="guestbook-footnote">写下的话会公开展示。昵称不代表已验证身份，友善交流就好。</p>
     </section>
     <section class="closing wrap" aria-label="结束语"><p>还有很多想法，<br>等着慢慢发生。</p><a class="circle-link" href="#main" aria-label="回到顶部">↑</a></section>
   </main>

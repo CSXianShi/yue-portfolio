@@ -1,6 +1,6 @@
 # 樾 / Yuè — 个人 Portfolio
 
-原创的温暖杂志式静态网站，包含首页、摄影展区、关于我、AI 电话助手独立案例页、房间改造工作流、兰多卡牌收藏册入口。HTML / CSS / 原生 JavaScript，没有 npm 安装、构建步骤、第三方 CDN、追踪脚本或后端。
+原创的温暖杂志式静态网站，包含首页、摄影展区、关于我、AI 电话助手独立案例页、房间改造工作流、兰多卡牌收藏册入口与公开留言板。HTML / CSS / 原生 JavaScript，没有 npm 安装或第三方 CDN；留言功能连接独立自托管的 Artalk 后端。
 
 ## 预览
 
@@ -32,6 +32,14 @@ python3 -m http.server 8793 --bind 127.0.0.1
 - `content.js`：显示名与摄影栏目。目前展示本人提供的《上海之行》五张照片。
 - `styles.css`：视觉风格、桌面/手机布局、弹窗与减少动画偏好。
 - `app.js`：摄影筛选、照片大图、交互示意、可选本地试放。
+- `guestbook.js`：按需加载 Artalk 留言板，固定留言页面标识，免登录昵称留言与失败重试。
+- `assets/vendor/artalk/`：官方 Artalk v2.10.0 客户端及 MIT 许可证，本地托管以避免外部 CDN。
+
+## 留言板
+
+首页 `#guestbook` 为全站共享留言板，服务地址 `https://comments.ultra-x.top`，采用维护中的开源 [Artalk](https://github.com/ArtalkJS/Artalk) v2.10.0。昵称留言无需注册、GitHub 登录或真实邮箱；设备生成的随机 `@guest.invalid` 标识仅用于满足 Artalk 的内部用户字段。公开留言支持回复与点赞，稳定使用 `/#guestbook` 作为页面键，不因网址查询参数或旧链接跳转分裂。
+
+后端独立运行在本机 `yue-guestbook.service`，SQLite 持久保存，仅监听回环地址，通过现有 Cloudflare Tunnel 的独立域名提供 HTTPS；保留其他隧道路由。后端配置、数据库及管理凭据不在本仓库或 Pages 发布包中。管理员可审核、删除或置顶留言；基础图形验证码会在短时间连续操作时启用。未启用真实邮箱收集、邮件通知、上传图片、地理位置徽标或访问统计。
 
 正式添加照片：将你愿意公开的照片放进 `assets/photos/`，在 `content.js` 对应条目填入：
 
