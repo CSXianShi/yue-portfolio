@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f2eb">
+  <meta name="description" content="用 iPhone 与 Polycam 扫描真实房间，再通过 AI 图像探索现代简约、白灰配色的改造方案。完整工作流与可复用提示词。">
+  <title>房间改造：手机扫描 + AI 图像设计工作流 — 樾 Yuè</title>
+  <link rel="icon" type="image/svg+xml" href="assets/mark.svg"><link rel="stylesheet" href="styles.css?v=room-workflow-20261001">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header wrap"><a class="wordmark" href="./" aria-label="樾的首页"><span class="brand-mark" aria-hidden="true">樾</span><span>YUÈ<span class="wordmark-small">A PERSONAL SPACE</span></span></a><nav aria-label="主要导航"><a href="index.html#projects" aria-current="page">项目</a><a href="index.html#photography">摄影</a><a href="index.html#about">关于我</a></nav><a class="header-note" href="index.html#projects">← 回到项目</a></header>
+  <main id="main" class="case-main wrap">
+    <a class="case-back" href="index.html#projects">← 所有项目</a>
+    <section class="case-hero"><p class="eyebrow">PROJECT 002 / ROOM REDESIGN</p><h1>从真实房间，<br>探索新的<span class="accent">可能。</span></h1><p class="case-deck">房间改造：手机扫描 + AI 图像设计工作流<br>先理解空间，再用图像逐步完善设计。</p><div class="case-meta"><div><span>类型</span><strong>生活空间 / AI 辅助设计</strong></div><div><span>工具</span><strong>iPhone 16 Pro · Polycam · AI 图像生成</strong></div><div><span>方向</span><strong>现代简约 · 白灰配色</strong></div></div></section>
+    <div class="workflow-actions"><a class="text-link" href="assets/documents/room-redesign-workflow.md" download="房间改造_AI图像工作流.md">下载原始工作流（Markdown） <span aria-hidden="true">↓</span></a><p>以下保留完整工作流。本页目前展示文字记录，效果图待加入。</p></div>
+    <div class="workflow-layout">
+      <aside class="workflow-toc" aria-label="工作流目录"><p class="eyebrow">IN THIS WORKFLOW</p><h2>从扫描到方案</h2><ol><li><a href="#workflow-1">我的核心思路</a></li>
+<li><a href="#workflow-2">原始设想与这次的调整</a></li>
+<li><a href="#workflow-3">第一步：采集真实房间</a></li>
+<li><a href="#workflow-4">第二步：把资料交给 AI</a></li>
+<li><a href="#workflow-5">第三步：生成整体概念图</a></li>
+<li><a href="#workflow-6">第四步：生成同一方案的细节图</a></li>
+<li><a href="#workflow-7">第五步：通过反馈迭代</a></li>
+<li><a href="#workflow-8">可复用的提示词</a></li>
+<li><a href="#workflow-9">最终交付与使用方式</a></li></ol></aside>
+      <article class="workflow-article" aria-label="房间改造完整工作流"><section class="workflow-section" aria-labelledby="workflow-1"><h2 id="workflow-1">1. 我的核心思路</h2><p>先用 iPhone 扫描真实房间，把房间的空间结构、现状和尺度交给 AI，再通过图像生成探索改造方案。确定一个喜欢的方向后，继续生成同一方案的不同角度和细节图片，逐步完善家具、收纳、材质与灯光。</p>
+<p>目标是得到<strong>贴近自己房间、直观好看、方便反复修改的设计参考图</strong>。</p></section>
+<section class="workflow-section" aria-labelledby="workflow-2"><h2 id="workflow-2">2. 原始设想与这次的调整</h2><p>最初的流程：</p>
+<blockquote>
+<p>手机扫描房间 → 提供扫描模型和照片 → GPT Image 生成概念图 → Blender 建模 → Blender 渲染效果图</p>
+</blockquote>
+<p>实际尝试后，Blender 版本在家具细节、材质、灯光和画面质感上没有达到预期，同时建模和渲染耗时较长。因此，本次工作流改为：</p>
+<blockquote>
+<p>手机扫描房间 → 读取空间和现状 → AI 生成整体概念图 → 选定方案 → AI 生成不同角度和细节图 → 根据反馈持续修改</p>
+</blockquote>
+<p><strong>当前流程放弃 Blender，直接用图像生成推进设计。</strong> 扫描仍然有价值，用来帮助 AI 理解真实空间和估算尺寸。</p></section>
+<section class="workflow-section" aria-labelledby="workflow-3"><h2 id="workflow-3">3. 第一步：采集真实房间</h2><h3>工具</h3>
+<ul>
+<li>手机：iPhone 16 Pro，带 LiDAR 激光雷达。</li>
+<li>扫描软件：本次使用 Polycam。</li>
+<li>扫描类型：选择「3D 空间」，使用 LiDAR 扫描房间。</li>
+<li>处理方式：普通单间可先选择 Dense；漏扫区域可以通过 Extend 补扫。</li>
+</ul>
+<h3>采集内容</h3>
+<ol>
+<li>缓慢扫描整个房间，覆盖墙面、地面、天花板、门窗和主要家具。</li>
+<li>尽量补扫墙角和家具遮挡区域。</li>
+<li>另拍几张清晰照片，补充扫描中看不清的材质和细节。</li>
+</ol>
+<p>建议提供的照片：</p>
+<ul>
+<li>从门口看向房间的整体照片。</li>
+<li>从窗户一侧看向门口的照片。</li>
+<li>床、书桌、柜子、门窗等局部照片。</li>
+</ul>
+<p>扫描可能出现破洞、漂浮碎片、玻璃或镜面失真。这些需要在理解房间时识别，避免被当成真实结构。</p></section>
+<section class="workflow-section" aria-labelledby="workflow-4"><h2 id="workflow-4">4. 第二步：把资料交给 AI</h2><h3>输入资料</h3>
+<ul>
+<li>Polycam 分享链接，或可读取的扫描文件。</li>
+<li>房间照片。</li>
+<li>喜欢的风格和配色。</li>
+<li>使用需求，例如睡觉、办公、学习和收纳。</li>
+<li>必须保留的家具与固定设施。</li>
+<li>大概预算，以及是否允许换家具、刷墙或改柜子。</li>
+</ul>
+<p>分享链接能否直接获取模型，取决于访问权限和资源是否可读取。如果链接无法获取完整资料，再使用导出的模型和照片。</p>
+<h3>尺寸怎么处理</h3>
+<p>扫描模型包含三维坐标，可以用于读取尺度、推算房间尺寸。应优先分析主要墙面、地面和天花板，排除漂浮碎片，不能直接把整个扫描模型的最大包围范围当成房间净尺寸。</p>
+<p><strong>前期设计可以先使用扫描估算尺寸，不必等所有尺寸实测完再开始。</strong> 买家具、定制柜体或施工前，再核对关键净尺寸和门窗位置。</p>
+<p>本次房间的初步扫描估算为：长约 3.05 米、宽约 2.45 米、层高约 2.70 米。这些数值仍需实测校准。</p></section>
+<section class="workflow-section" aria-labelledby="workflow-5"><h2 id="workflow-5">5. 第三步：生成整体概念图</h2><p>先生成一张能看清主要布局的整体图，例如从门口看向窗户。</p>
+<p>生成时同时参考真实扫描和照片，明确以下约束：</p>
+<ul>
+<li>保持房间原有的大小和空间关系。</li>
+<li>保持门窗及其他固定结构的位置。</li>
+<li>明确哪些家具保留，哪些可以替换。</li>
+<li>让床、桌、柜等家具适合小房间的尺度。</li>
+<li>考虑日常使用、开门、拉椅子和通行空间。</li>
+<li>清理杂物和扫描伪影，呈现改造后的状态。</li>
+</ul>
+<p>本次选择的方向是：<strong>现代简约、白灰配色</strong>，结合浅色地板、白色收纳家具、灰色织物和适量暖光。</p>
+<p>整体图主要用于判断：布局是否喜欢、配色是否舒服、家具是否符合需求，以及改造幅度是否合适。</p></section>
+<section class="workflow-section" aria-labelledby="workflow-6"><h2 id="workflow-6">6. 第四步：生成同一方案的细节图</h2><p>选定一张整体图，作为后续图片的共同参考。每次生成新角度或近景时，都附上这张参考图，并明确要求保持同一个房间、同一套家具和材质。</p>
+<p>本次采用的三张图：</p>
+<div class="workflow-table"><table>
+<thead>
+<tr>
+<th scope="col">图片</th>
+<th scope="col">主要用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>整体效果图</td>
+<td>查看房间布局、配色和整体氛围</td>
+</tr>
+<tr>
+<td>书桌与收纳近景</td>
+<td>查看桌面、抽屉、柜体、工作灯和办公区域</td>
+</tr>
+<tr>
+<td>床边与窗户近景</td>
+<td>查看床品、窗帘、床下收纳和材质细节</td>
+</tr>
+</tbody>
+</table></div>
+<p>后续也可以补充门口收纳、衣柜内部或夜间灯光图，但应围绕同一方案展开。</p>
+<p>不同图片之间需要检查一致性：门窗位置、家具形状、柜体数量、材质和布局是否发生了变化。图像生成能够提供视觉参考，但不能保证每个角度都严格对应同一套三维空间。</p></section>
+<section class="workflow-section" aria-labelledby="workflow-7"><h2 id="workflow-7">7. 第五步：通过反馈迭代</h2><p>每轮尽量集中修改少量明确的问题，例如：</p>
+<ul>
+<li>灰色太冷，调整成更温暖的浅灰。</li>
+<li>桌面太小，增加工作面积。</li>
+<li>开放格太多，改成封闭收纳。</li>
+<li>灯光太黄，减少暖光强度。</li>
+<li>家具显得太大，按实际房间缩小。</li>
+<li>保留原来的床，只调整床品和周围收纳。</li>
+</ul>
+<p>修改时明确写出：<strong>这次改什么，以及哪些布局和设计要继续保持。</strong></p>
+<p>如果改动影响整体布局，先更新整体图，再根据新的整体图重新生成细节图，避免细节图沿用旧方案。</p></section>
+<section class="workflow-section" aria-labelledby="workflow-8"><h2 id="workflow-8">8. 可复用的提示词</h2><h3>整体方案</h3>
+<blockquote>
+<p>请根据我提供的房间扫描和照片，生成房间改造的整体效果图。风格是【风格】，配色是【配色】。保持真实房间的尺寸感、门窗位置和固定结构，不要把小房间扩大。必须保留【保留内容】，可以调整【可调整内容】。我的主要需求是【使用需求】，预算约为【预算】。请考虑家具尺度、收纳和通行空间，清理扫描伪影与杂物，呈现自然、真实、可以作为装修参考的画面。</p>
+</blockquote>
+<h3>局部细节</h3>
+<blockquote>
+<p>以这张选定的整体效果图为共同参考，生成同一房间的【书桌／床边／柜体】近景。保持原有布局、家具设计、颜色和材质，只改变观察角度和画面重点。清楚展示【需要看的细节】，不要新增门窗、改变房间结构或替换成另一套设计。</p>
+</blockquote>
+<h3>修改方案</h3>
+<blockquote>
+<p>在当前方案基础上，只修改【具体改动】。继续保持【需要保持的布局、家具和材质】。请更新【整体图／指定细节图】，确保新图与当前方案一致。</p>
+</blockquote></section>
+<section class="workflow-section" aria-labelledby="workflow-9"><h2 id="workflow-9">9. 最终交付与使用方式</h2><p>交付内容以图片为主：</p>
+<ul>
+<li>一张整体方案图。</li>
+<li>几张重点区域的细节图。</li>
+<li>简短的配色、家具与收纳建议。</li>
+<li>方案确定后，列出需要核对的尺寸和待选家具。</li>
+</ul>
+<p>这些图用于选择风格、讨论布局、寻找家具，以及向设计师或施工人员表达需求。确定购买或施工前，再把图中的家具尺寸、开门范围、桌椅使用空间和柜体做法落实到实测条件。</p></section></article>
+    </div>
+    <div class="case-end"><a class="button button-dark" href="index.html#projects">← 回到个人空间</a><a class="text-link" href="#main">回到工作流顶部 ↑</a></div>
+  </main>
+  <footer class="site-footer wrap"><a href="./" class="footer-name">樾 / YUÈ</a><p>每一次尝试，都是一份新的记录。</p><span>© 2026 Yuè</span></footer>
+</body>
+</html>
