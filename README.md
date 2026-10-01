@@ -1,6 +1,6 @@
 # 樾 / Yuè — 个人 Portfolio
 
-原创的温暖杂志式静态网站，包含首页、摄影展区、关于我、AI 电话助手独立案例页、房间改造工作流。HTML / CSS / 原生 JavaScript，没有 npm 安装、构建步骤、第三方 CDN、追踪脚本或后端。
+原创的温暖杂志式静态网站，包含首页、摄影展区、关于我、AI 电话助手独立案例页、房间改造工作流、兰多卡牌收藏册入口。HTML / CSS / 原生 JavaScript，没有 npm 安装、构建步骤、第三方 CDN、追踪脚本或后端。
 
 ## 预览
 
@@ -26,6 +26,7 @@ python3 -m http.server 8793 --bind 127.0.0.1
 - `phone-assistant.html`：电话项目的案例叙事、功能、已知限制与后续记录。
 - `room-redesign.html`：房间改造完整工作流、目录与原文下载。
 - `assets/documents/room-redesign-workflow.md`：用户提供的工作流原文，逐字节保留。
+- `lando-collection.html`：兰多卡牌收藏册入口，目前展示原创主题插画，未冒充实体卡实拍或添加未核实的收藏条目。
 - `content.js`：显示名与摄影栏目。目前展示本人提供的《上海之行》五张照片。
 - `styles.css`：视觉风格、桌面/手机布局、弹窗与减少动画偏好。
 - `app.js`：摄影筛选、照片大图、交互示意、可选本地试放。

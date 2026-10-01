@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 500" width="580" height="500" role="img" aria-labelledby="title desc">
+<title id="title">兰多卡牌收藏主题插画</title><desc id="desc">三张交叠的原创赛车主题卡牌，包含抽象头盔、赛车线条与04字样，是收藏册封面插画，不是实体卡实拍。</desc>
+<defs>
+ <linearGradient id="paper" x2=".8" y2="1"><stop stop-color="#fbf6e9"/><stop offset="1" stop-color="#e1ddca"/></linearGradient>
+ <linearGradient id="green" x2=".9" y2="1"><stop stop-color="#667554"/><stop offset="1" stop-color="#34442e"/></linearGradient>
+ <linearGradient id="foil" x2="1" y2="1"><stop stop-color="#b5c5a1"/><stop offset=".5" stop-color="#e5d3a5"/><stop offset="1" stop-color="#bdcbb8"/></linearGradient>
+ <radialGradient id="shadow"><stop stop-color="#3a462e" stop-opacity=".2"/><stop offset="1" stop-color="#3a462e" stop-opacity="0"/></radialGradient>
+</defs>
+<ellipse cx="285" cy="437" rx="202" ry="35" fill="url(#shadow)"/>
+<g transform="rotate(-15 222 256)">
+ <rect x="106" y="77" width="230" height="338" rx="13" fill="#dad6c7" stroke="#a6af97" stroke-width="2"/>
+ <rect x="120" y="91" width="202" height="310" rx="6" fill="#eae6d7" stroke="#bdc4af"/>
+ <path d="M130 140L305 324M130 188L296 365M166 103L305 250" stroke="#c1c9b2" stroke-width="12" opacity=".5"/>
+ <text x="140" y="129" fill="#7b8969" font-family="Georgia,serif" font-size="13" letter-spacing="3">FIELDNOTES</text>
+ <text x="134" y="373" fill="#7b8969" font-family="Georgia,serif" font-size="52">04</text>
+</g>
+<g transform="rotate(12 355 255)">
+ <rect x="252" y="79" width="218" height="329" rx="13" fill="#79866b" stroke="#657658" stroke-width="2"/>
+ <rect x="265" y="92" width="192" height="303" rx="6" fill="url(#green)" stroke="#9eac8a"/>
+ <path d="M276 277L442 106M276 330L442 158M304 385L442 234" stroke="#a3b092" stroke-width="20" opacity=".2"/>
+ <text x="286" y="128" fill="#e5e7d4" font-family="Arial,sans-serif" font-size="11" letter-spacing="3">RACING NOTES</text>
+ <path d="M286 344H350M286 353H321" stroke="#b8c2a8"/>
+ <text x="405" y="374" fill="#cbd4be" font-family="Georgia,serif" font-size="28">↗</text>
+</g>
+<g transform="rotate(-3 285 252)">
+ <rect x="178" y="70" width="238" height="359" rx="14" fill="#657653" opacity=".15" transform="translate(5 8)"/>
+ <rect x="173" y="63" width="238" height="359" rx="14" fill="url(#paper)" stroke="#899675" stroke-width="2"/>
+ <rect x="185" y="75" width="214" height="335" rx="7" fill="none" stroke="url(#foil)" stroke-width="3"/>
+ <text x="199" y="106" fill="#647552" font-family="Arial,sans-serif" font-size="10" letter-spacing="2.5">LANDO / COLLECTION</text>
+ <path d="M198 118H385" stroke="#b8bea7"/>
+ <rect x="199" y="134" width="186" height="198" rx="4" fill="url(#green)"/>
+ <path d="M209 250L376 156M209 282L376 188M209 314L376 220" stroke="#9aab81" stroke-width="13" opacity=".14"/>
+ <circle cx="293" cy="229" r="70" fill="none" stroke="#aebc92" opacity=".45"/>
+ <path d="M216 285C218 239 225 187 274 177C323 165 351 194 355 231L367 256L352 272L311 285Z" fill="#c8ccb1" stroke="#dae0c4" stroke-width="2"/>
+ <path d="M219 252L229 230L353 222L362 245L317 254Z" fill="#3e4a32" stroke="#9ba987" stroke-width="2"/>
+ <path d="M240 231L338 226L346 236L237 242Z" fill="url(#foil)"/>
+ <path d="M243 199C262 182 293 180 312 193" fill="none" stroke="#ede6ca" stroke-width="5" stroke-linecap="round"/>
+ <path d="M224 267L270 264M232 277L282 274" stroke="#839271" stroke-width="2"/>
+ <path d="M285 263L327 260L338 271L304 281Z" fill="#b27d52"/>
+ <text x="210" y="317" fill="#e7e7d3" font-family="Arial,sans-serif" font-size="8" letter-spacing="3">A LITTLE PIECE OF THE RACE</text>
+ <text x="199" y="367" fill="#465639" font-family="Georgia,serif" font-size="29">Lando Norris</text>
+ <text x="201" y="389" fill="#7d896b" font-family="Arial,sans-serif" font-size="8" letter-spacing="2">PERSONAL COLLECTION</text>
+ <text x="354" y="391" fill="#ad754c" font-family="Georgia,serif" font-size="28">04</text>
+</g>
+<g fill="none" stroke="#8d9b77" stroke-width="1.5" opacity=".8"><path d="M85 210V191H104M472 309H491V290"/><path d="M442 46V68M431 57H453M120 383V397M113 390H127"/></g>
+</svg>
