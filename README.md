@@ -26,7 +26,7 @@ python3 -m http.server 8793 --bind 127.0.0.1
 - `phone-assistant.html`：电话项目的案例叙事、功能、已知限制与后续记录。
 - `room-redesign.html`：房间改造完整工作流、目录与原文下载。
 - `assets/documents/room-redesign-workflow.md`：用户提供的工作流原文，逐字节保留。
-- `lando-collection.html`：兰多卡牌收藏册入口，收录用户提供合照中的三张卡牌，使用仅裁切和透视校正的正面图；附资料来源，未确认的折射版别明确标为候选。首页封面仍为原创主题插画。
+- `lando-collection.html`：兰多卡牌收藏册入口，收录用户提供合照中的三张卡牌，Lights Out 使用用户选用的 AI 增强预览（显式标注，可切换实拍裁切），原片仍保留。下面两张按用户提供的购入描述记录为 Base 与黑白棋盘折；卡号及限编仍待卡背核验。首页封面仍为原创主题插画。
 - `collection-cards.json`：三张卡的资料与核验状态。
 - `collection.js`：卡牌大图浏览与键盘关闭。
 - `content.js`：显示名与摄影栏目。目前展示本人提供的《上海之行》五张照片。

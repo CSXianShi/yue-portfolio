@@ -8,7 +8,7 @@
     "cardNumber": "系列清单无卡号",
     "parallel": "Base 普卡（初步识别）",
     "description": "以深色星空、行星与兰多的迈凯伦车手肖像构成卡面；对应 2026 Lights Out 的主卡主题。照片未见明显彩色平行特征，暂按 Base 记录，明天细拍后复核。",
-    "note": "系列清单未列数字卡号；具体平行版本与限编情况待卡背核对。",
+    "note": "默认显示用户选用的 AI 增强预览，部分细节可能经过重绘，不用于判断卡面印刷或品相；可切换到实拍裁切。具体平行版本与限编仍待卡背核对。",
     "image": "assets/cards/lando-lights-out-front.png",
     "sources": [
       {
@@ -19,18 +19,20 @@
         "label": "2026 Lights Out 清单",
         "url": "https://www.checklistinsider.com/2026-topps-lights-out-formula-1"
       }
-    ]
+    ],
+    "previewImage": "assets/cards/lando-lights-out-ai-preview.png",
+    "previewImageKind": "AI增强预览"
   },
   {
     "id": "grand-prix-left",
-    "title": "奥地利站 · 黑白激光折？",
+    "title": "奥地利站 · Base 普卡",
     "brand": "Topps Chrome",
     "series": "2025 Chrome Formula 1",
     "subset": "Grand Prix Driver of the Day",
     "cardNumber": "#132（清单匹配，待卡背确认）",
-    "parallel": "疑似 B&W Lazer Refractor",
-    "description": "记录 2024 奥地利大奖赛的 Driver of the Day 主题，卡面为戴橙色帽子的兰多。灰黑背景可见不规则切面，较接近 2025 Chrome 清单中的黑白激光折（B&W Lazer），先作候选版别保留。",
-    "note": "卡面上的 2024 是比赛年份，不是发行年份。不是凭“黑白”二字就认定黑白波纹折。",
+    "parallel": "Base（普卡）",
+    "description": "2025 Topps Chrome F1 的 Grand Prix Driver of the Day 主题，记录 2024 奥地利大奖赛。用户提供的购入商品描述为“黑白棋盘折＋base”两张打包，这张对应 Base 普卡，而不是黑白激光折。",
+    "note": "卡面上的 2024 是比赛年份，不是发行年份。#132 由同卡面与清单匹配，仍待卡背确认。",
     "image": "assets/cards/lando-grand-prix-left-front.png",
     "sources": [
       {
@@ -41,18 +43,20 @@
         "label": "#132 奥地利站同卡面参考",
         "url": "https://www.ebay.com/itm/127804974254"
       }
-    ]
+    ],
+    "identification": "按购入描述核对",
+    "confirmation": "用户提供的购入商品描述：黑白棋盘折＋base（2026-10-01）"
   },
   {
     "id": "grand-prix-right",
-    "title": "奥地利站 · 棋盘格折？",
+    "title": "奥地利站 · 黑白棋盘折",
     "brand": "Topps Chrome",
     "series": "2025 Chrome Formula 1",
     "subset": "Grand Prix Driver of the Day",
     "cardNumber": "#132（清单匹配，待卡背确认）",
-    "parallel": "疑似 Checker Flag Refractor",
-    "description": "与左侧是同一卡面主题，但背景与边框呈明显棋盘方格，并保留蓝紫色闪面反光。外观较接近清单中的 Checker Flag Refractor，中文常称棋盘格折或方格旗折；具体颜色与限编还需细拍核对。",
-    "note": "原图反光保留，不用生成式修复抹去闪面；尚未确认限量编号或品相。",
+    "parallel": "黑白棋盘折 · Checker Flag",
+    "description": "与 Base 是同一张 Driver of the Day 卡面，增加了棋盘方格的折射纹理。购入商品描述称“黑白棋盘折”；2025 Chrome 清单中的对应平行名称为 Checker Flag。原片的闪面与反光保留。",
+    "note": "版别按用户提供的购入描述记录；#132 与具体限编仍待卡背确认，不据照片推断品相。",
     "image": "assets/cards/lando-grand-prix-right-front.png",
     "sources": [
       {
@@ -63,6 +67,8 @@
         "label": "Beckett · 2025 Chrome F1",
         "url": "https://www.beckett.com/news/2025-topps-chrome-formula-1-racing-cards/"
       }
-    ]
+    ],
+    "identification": "按购入描述核对",
+    "confirmation": "用户提供的购入商品描述：黑白棋盘折＋base（2026-10-01）"
   }
 ]
