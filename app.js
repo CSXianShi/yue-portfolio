@@ -85,7 +85,8 @@
     });
     if (status) {
       const loaded = [...records.values()].filter(record => !record.card.hidden && (record.localUrl || record.data.image)).length;
-      status.textContent = loaded ? `${visible} 个系列 · ${loaded} 张${preview ? "预览照片" : "作品"}` : `${visible} 个系列 · 作品整理中`;
+      const series = new Set([...records.values()].filter(record => !record.card.hidden).map(record => record.data.series || record.data.id)).size;
+      status.textContent = loaded ? `${series} 个系列 · ${loaded} 张${preview ? "照片（含本地试放）" : "作品"}` : `${series} 个系列 · 作品整理中`;
     }
   }
   function loadFile(record, file) {
@@ -119,6 +120,10 @@
       card.dataset.category = data.category;
       const visual = make("button", "photo-visual");
       visual.type = "button";
+      if (data.aspectRatio) {
+        visual.style.aspectRatio = data.aspectRatio;
+        visual.classList.add("photo-original-ratio");
+      }
       const metadata = make("div", "photo-meta");
       const copy = make("div");
       const description = make("p");

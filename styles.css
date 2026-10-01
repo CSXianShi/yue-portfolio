@@ -10,3 +10,6 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 /* Keep the untransformed sticker box inside the narrow-screen viewport too. */
 @media(max-width:600px){.hero-art .art-sticker{right:0}}
+
+/* Published photographs retain the original landscape/portrait framing. */
+.photo-visual.photo-original-ratio>img{object-fit:contain}.photo-visual.photo-original-ratio:hover>img{transform:none}
