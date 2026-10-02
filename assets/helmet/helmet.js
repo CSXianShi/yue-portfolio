@@ -152,10 +152,15 @@ async function init() {
   hero.addEventListener('pointermove', event => {
     if (event.pointerType === 'mouse') brush(event);
   }, { passive: true });
-  hero.addEventListener('pointerleave', () => { targetX = targetY = 0; schedule(); });
+  hero.addEventListener('pointerleave', event => {
+    // Touch pointers leave on lift: retain the user's inspection angle.
+    if (event.pointerType !== 'mouse') return;
+    targetX = targetY = 0; schedule();
+  });
   stage.addEventListener('pointerdown', event => {
     if (event.pointerType === 'mouse' || reduced.matches) return;
     drag = { id: event.pointerId, x: event.clientX, angle: targetX };
+    stage.setPointerCapture(event.pointerId);
   }, { passive: true });
   stage.addEventListener('pointermove', event => {
     if (!drag || drag.id !== event.pointerId) return;
