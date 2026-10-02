@@ -91,5 +91,85 @@
     ],
     "photoDate": "2026-10-02",
     "imageOrigin": "用户提供的 GRAND PRIX.pdf 内嵌 JPEG；原像素提取，仅移除 EXIF/IPTC 元数据，未再次增强或重绘。"
+  },
+  {
+    "id": "epic-hungary",
+    "title": "匈牙利站 · Epic Moment",
+    "brand": "Topps",
+    "series": "Topps · 发行系列待核对",
+    "subset": "Epic Moment",
+    "cardNumber": "#109（正面可见）",
+    "parallel": "版别待卡背核对",
+    "description": "卡面记录 2025 匈牙利大奖赛，印有 03.08、DEF 91 / ATT 77，以及车手与赛车的拼贴画面。",
+    "note": "比赛年份按卡面记录，不作为发行年份。",
+    "image": "assets/cards/lando-epic-hungary-detail-20261002.jpg",
+    "imageDimensions": [
+      2836,
+      2016
+    ],
+    "photoDate": "2026-10-02",
+    "imageOrigin": "用户提供的海报.pdf 内嵌 JPEG；原像素提取，仅移除 EXIF/IPTC 元数据。",
+    "identification": "按卡面文字记录",
+    "sources": []
+  },
+  {
+    "id": "now-champion",
+    "title": "世界冠军 · Topps NOW",
+    "brand": "Topps NOW",
+    "series": "Topps NOW Formula 1",
+    "subset": "2025 阿布扎比大奖赛",
+    "cardNumber": "正面未见编号",
+    "parallel": "版别待卡背核对",
+    "description": "卡面印有 07.12.25、World Champion 2025，并以兰多站在赛车上举起双臂的画面记录这一时刻。",
+    "note": "标题与事件说明按卡面文字记录，卡号与限编待卡背核对。",
+    "image": "assets/cards/lando-now-champion-detail-20261002.jpg",
+    "imageDimensions": [
+      1924,
+      2676
+    ],
+    "photoDate": "2026-10-02",
+    "imageOrigin": "用户提供的海报.pdf 内嵌 JPEG；原像素提取，仅移除 EXIF/IPTC 元数据。",
+    "identification": "按卡面文字记录",
+    "sources": []
+  },
+  {
+    "id": "legacy-228",
+    "title": "兰多肖像 · Turbo Attax Legacy",
+    "brand": "Topps",
+    "series": "Turbo Attax · 发行年份待核对",
+    "subset": "Turbo Attax Legacy",
+    "cardNumber": "#228（正面可见）",
+    "parallel": "具体闪面版别待核对",
+    "description": "肖像卡面带有颗粒状彩色闪面，正面印有 DEFENCE 94、ATTACK 81 与 Turbo Attax Legacy 字样。",
+    "note": "保留实拍中的彩色纹理；不据正面反光推断平行版、限编或品相。",
+    "image": "assets/cards/lando-legacy-228-detail-20261002.jpg",
+    "imageDimensions": [
+      1968,
+      2848
+    ],
+    "photoDate": "2026-10-02",
+    "imageOrigin": "用户提供的海报.pdf 内嵌 JPEG；原像素提取，仅移除 EXIF/IPTC 元数据。",
+    "identification": "按卡面文字记录",
+    "sources": []
+  },
+  {
+    "id": "now-hungary",
+    "title": "匈牙利站捧杯 · Topps NOW",
+    "brand": "Topps NOW",
+    "series": "Topps NOW Formula 1",
+    "subset": "2025 匈牙利大奖赛",
+    "cardNumber": "正面未见编号",
+    "parallel": "版别待卡背核对",
+    "description": "兰多亲吻奖杯的瞬间。卡面印有 03.08.25 与“Claims fifth victory of the season”，按印刷文字记录为当赛季第五胜主题。",
+    "note": "卡号与限编待卡背核对。",
+    "image": "assets/cards/lando-now-hungary-detail-20261002.jpg",
+    "imageDimensions": [
+      2008,
+      2728
+    ],
+    "photoDate": "2026-10-02",
+    "imageOrigin": "用户提供的海报.pdf 内嵌 JPEG；原像素提取，仅移除 EXIF/IPTC 元数据。",
+    "identification": "按卡面文字记录",
+    "sources": []
   }
 ]

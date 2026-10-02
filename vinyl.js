@@ -46,13 +46,14 @@
       copy.append(make('span', 'record-number', number), make('h3', '', record.title));
       if (record.artist) copy.append(make('p', '', record.artist));
       if (record.note) copy.append(make('p', 'record-listening-note', record.note));
+      if (record.source?.startsWith('https://')) { const source=make('a','text-link','封面来源 ↗'); source.href=record.source; source.target='_blank'; source.rel='noopener noreferrer'; copy.append(source); }
       slot.append(copy);
     } else {
       slot.classList.add('is-empty');
       display.setAttribute('aria-label', `待收录位置 ${number}`);
       sleeve.append(make('span', 'sleeve-orbit'), make('span', 'sleeve-caption', '下一张\n喜欢。'), make('span', 'sleeve-label', 'COVER / TO BE ADDED'));
       const copy = make('div', 'record-copy');
-      copy.append(make('span', 'record-number', number), make('h3', '', '唱片待收录'));
+      copy.append(make('span', 'record-number', number), make('h3', '', window.VINYL_CONTENT?.pending ? '黑白笑脸封面 · 核对中' : '唱片待收录'));
       slot.append(copy);
     }
     display.append(disc, sleeve);
@@ -61,6 +62,6 @@
   }
   document.querySelector('#vinyl-count').textContent = `已展示 ${records.length} 张 · ${records.length ? '慢慢收集' : '整理中'}`;
   document.querySelector('#vinyl-empty').hidden = records.length > 0;
-  if (records.length) document.querySelector('#vinyl-wall-note').textContent = '点击封面，翻看完整画面。空白位置留给下一张喜欢的唱片。';
+  if (records.length) document.querySelector('#vinyl-wall-note').textContent = (window.VINYL_CONTENT?.pending ? '已收录五张。黑白笑脸封面的专辑名正在核对，暂留一个位置。' : '点击封面，翻看完整画面。');
   document.querySelector('#vinyl-year').textContent = new Date().getFullYear();
 })();
