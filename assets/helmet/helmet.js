@@ -8,7 +8,7 @@ import { HDRLoader } from '../vendor/three/HDRLoader.js';
 const stage = document.querySelector('[data-helmet-stage]');
 if (stage) init().catch(() => {
   stage.dataset.state = 'fallback';
-  stage.closest('figure').querySelector('.helmet-instruction').textContent = 'LANDO / HELMET';
+  stage.closest('figure').querySelector('.helmet-instruction').textContent = 'LANDO / YUÈ';
   stage.closest('figure').querySelector('.helmet-toggle').hidden = true;
 });
 
@@ -36,7 +36,7 @@ async function init() {
   draco.setWorkerLimit(1);
   const loader = new GLTFLoader().setDRACOLoader(draco);
   const textures = new THREE.TextureLoader();
-  const [gltf, base, normal, visor, roughness, metallic, environment, headDiffuse] = await Promise.all([
+  const [gltf, base, normal, visor, roughness, metallic, environment, headDiffuse, headAlpha, yuePortrait] = await Promise.all([
     loader.loadAsync(url('lando-helmet.glb')),
     textures.loadAsync(url('gold-base.webp')),
     textures.loadAsync(url('normal.webp')),
@@ -44,6 +44,8 @@ async function init() {
     textures.loadAsync(url('visor-roughness.webp')),
     textures.loadAsync(url('visor-metallic.webp')),
     new HDRLoader().loadAsync(url('studio.hdr')),
+    textures.loadAsync(url('head-diffuse.webp')),
+    textures.loadAsync(url('head-alpha.webp')),
     textures.loadAsync(url('yue-portrait.webp')),
   ]);
   draco.dispose();
@@ -68,9 +70,14 @@ async function init() {
   headDiffuse.colorSpace = THREE.SRGBColorSpace;
   const fluid = new FluidCursor(renderer);
   const headScene = new THREE.Scene();
-  const head = new THREE.Mesh(new THREE.PlaneGeometry(3.4, 3.4 * 512 / 413), new THREE.MeshBasicMaterial({ map: headDiffuse, transparent: true }));
+  const head = new THREE.Mesh(new THREE.PlaneGeometry(4.2, 4.2), new THREE.MeshBasicMaterial({ map: headDiffuse, alphaMap: headAlpha, transparent: true }));
   head.position.y = -.45;
   headScene.add(head);
+  scene.remove(rig);
+  yuePortrait.colorSpace = THREE.SRGBColorSpace;
+  const yue = new THREE.Mesh(new THREE.PlaneGeometry(3.4, 3.4 * 512 / 413), new THREE.MeshBasicMaterial({ map: yuePortrait, transparent: true }));
+  yue.position.y = -.45;
+  scene.add(yue);
   const helmetTarget = new THREE.WebGLRenderTarget(1, 1, { depthBuffer: true });
   const headTarget = new THREE.WebGLRenderTarget(1, 1, { depthBuffer: false });
   const uniforms = { tHelmet: { value: helmetTarget.texture }, tHead: { value: headTarget.texture }, tCursorEffect: { value: fluid.output.texture }, uHelmetHover: { value: reduced.matches ? 1 : 0 } };
@@ -141,6 +148,7 @@ async function init() {
     rotationX += (targetX - rotationX) * easing;
     rotationY += (targetY - rotationY) * easing;
     head.rotation.set(rotationY, rotationX, 0);
+    yue.rotation.set(rotationY, rotationX, 0);
     rig.rotation.y = -.35 + rotationX / 1.5;
     rig.rotation.x = .14 + rotationY / 1.5;
     if (!reduced.matches) fluid.update();
@@ -177,8 +185,8 @@ async function init() {
   for (const type of ['pointerup', 'pointercancel']) window.addEventListener(type, () => { drag = null; }, { passive: true });
   function updateUI() {
     button.setAttribute('aria-pressed', String(pinned));
-    button.textContent = pinned ? '返回流体显现' : '查看完整头盔';
-    instruction.textContent = reduced.matches ? 'LANDO / HELMET' : touch.matches ? '滑动，显现头盔' : '移动鼠标，流体显现头盔';
+    button.textContent = pinned ? '返回流体显现' : '查看完整照片';
+    instruction.textContent = reduced.matches ? 'LANDO / YUÈ' : touch.matches ? '滑动，显现樾' : '移动鼠标，流体显现樾';
     button.hidden = reduced.matches || touch.matches;
   }
   button.addEventListener('click', () => { pinned = !pinned; updateUI(); schedule(); });
