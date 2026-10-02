@@ -1,4 +1,4 @@
-// Confirmed from owner photographs; original online art, no AI reconstruction.
+// Owner-confirmed records; official online art, no AI reconstruction.
 window.VINYL_CONTENT = {
   "records": [
     {
@@ -50,7 +50,17 @@ window.VINYL_CONTENT = {
       "width": 1000,
       "height": 1000,
       "identification": "按用户实物封套照片与官网图片核对，不据封套推断胶片颜色"
+    },
+    {
+      "title": "petal",
+      "artist": "Ariana Grande",
+      "cover": "assets/vinyl/ariana-petal.jpg",
+      "note": "标准封面 · 黑白微笑",
+      "source": "https://music.apple.com/us/album/petal/1895420874",
+      "width": 3000,
+      "height": 3000,
+      "identification": "用户确认专辑名，按 Apple Music 官方平面封面核对，不推断胶片颜色"
     }
   ],
-  "pending": true
+  "pending": false
 };
