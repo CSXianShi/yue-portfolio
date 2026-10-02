@@ -1,6 +1,6 @@
 # 樾 / Yuè — 个人 Portfolio
 
-原创的温暖杂志式静态网站，包含首页、摄影展区、关于我、AI 电话助手独立案例页、房间改造工作流、兰多卡牌收藏册入口与公开留言板。HTML / CSS / 原生 JavaScript，没有 npm 安装或第三方 CDN；留言功能连接独立自托管的 Artalk 后端。
+原创的温暖杂志式静态网站，包含首页、摄影展区、关于我、AI 电话助手独立案例页、房间改造工作流、兰多卡牌收藏册、黑胶唱片展示墙与公开留言板。HTML / CSS / 原生 JavaScript，没有 npm 安装或第三方 CDN；留言功能连接独立自托管的 Artalk 后端。
 
 ## 预览
 
@@ -29,6 +29,9 @@ python3 -m http.server 8793 --bind 127.0.0.1
 - `lando-collection.html`：兰多卡牌收藏册入口，收录用户提供合照中的三张卡牌，Lights Out 使用用户选用的 AI 增强预览（显式标注，可切换 10 月 2 日高清细拍），三张实拍使用用户提供的 PDF 内嵌高清 JPEG，原像素保留，仅移除 EXIF/IPTC 元数据，没有再次增强或重绘。提供三张高清 ZIP 下载，旧合照裁切 PNG 与原 ZIP 链接仍保留。下面两张按用户提供的购入描述记录为 Base 与黑白棋盘折，棋盘格纹在新正面实拍中也可见；卡号及限编仍待卡背核验。首页封面仍为原创主题插画。
 - `collection-cards.json`：三张卡的资料与核验状态。
 - `collection.js`：卡牌大图浏览与键盘关闭。
+- `vinyl-wall.html`：独立黑胶唱片展示墙，首页提供入口；空白唱片套显式标为待收录，不代表用户已拥有这些唱片。
+- `vinyl-content.js`：仅填写用户确认的唱片与封面，目前清单为空。
+- `vinyl.js`：唱片墙、空白位置和已展示数量；封面大图复用 `collection.js` 的原生弹窗，不加载外部画廊库或音频。
 - `content.js`：显示名与摄影栏目。目前展示本人提供的《上海之行》五张照片。
 - `styles.css`：视觉风格、桌面/手机布局、弹窗与减少动画偏好。
 - `app.js`：摄影筛选、照片大图、交互示意、可选本地试放。
@@ -55,7 +58,7 @@ caption: "你自己确认过的标题、日期或地点"
 
 ## GitHub Pages
 
-本仓库使用 GitHub Pages 免费静态托管，GitHub Actions 从 `main` 自动打包并部署。`scripts/build-pages.py` 仅收录公开静态网站文件，`.nojekyll` 保留原始静态文件。
+本仓库使用 GitHub Pages 免费静态托管，GitHub Actions 从 `main` 自动打包并部署。`scripts/build-pages.py` 仅收录公开静态网站文件（包含 `vinyl-wall.html` 和两份黑胶脚本），`.nojekyll` 保留原始静态文件。
 
 在线：[个人页面](https://blog.ultra-x.top)。个人页已升为域名首页；旧 `/yue-portfolio/` 页面链接自动跳转到新地址并保留查询参数及章节位置，旧图片和下载地址仍可用。此前停用的博客原始内容仍保留在原仓库，未删除。
 

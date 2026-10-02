@@ -6,8 +6,8 @@ import sys
 root = Path(__file__).resolve().parents[1]
 output = Path(sys.argv[1] if len(sys.argv) > 1 else "_site")
 output.mkdir(parents=True, exist_ok=False)
-pages = ["index.html", "phone-assistant.html", "room-redesign.html", "lando-collection.html"]
-files = pages + ["app.js", "guestbook.js", "collection.js", "content.js", "collection-cards.json", "styles.css", ".nojekyll", "CNAME"]
+pages = ["index.html", "phone-assistant.html", "room-redesign.html", "lando-collection.html", "vinyl-wall.html"]
+files = pages + ["app.js", "guestbook.js", "collection.js", "content.js", "collection-cards.json", "vinyl-content.js", "vinyl.js", "styles.css", ".nojekyll", "CNAME"]
 for name in files:
     shutil.copy2(root / name, output / name)
 shutil.copytree(root / "assets", output / "assets")

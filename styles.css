@@ -54,3 +54,56 @@
 #guestbook-comments .atk-list-footer{font-size:10px}
 @media(max-width:600px){.site-header nav{gap:14px;white-space:nowrap}.guestbook-section{margin-top:40px}.guestbook-intro{align-items:flex-start;flex-direction:column;gap:12px}.guestbook-intro p{font-size:11px}.guestbook-panel{padding:17px 13px}.guestbook-footnote{font-size:9px;line-height:1.9}}
 @media(max-width:360px){.site-header{gap:8px}.site-header nav{gap:10px;font-size:10px}.wordmark{gap:5px;font-size:18px}}
+
+/* Vinyl collection: paper sleeves, black grooves and a warm wooden ledge. */
+.vinyl-project{margin-top:28px;background:#efebe1}
+.vinyl-scene{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px 32px 26px;background:#dadccc;overflow:hidden}
+.vinyl-scene .scene-note{text-align:center}
+.vinyl-cover-study{position:relative;width:min(100%,350px);aspect-ratio:1.2;margin:22px 0 18px}
+.vinyl-disc{position:absolute;display:block;width:84%;aspect-ratio:1;right:0;top:2%;border-radius:50%;background:repeating-radial-gradient(circle at 50% 50%,#242520 0 1px,#35362f 1.5px 2px,#22231e 2.5px 4px);box-shadow:3px 6px 10px #25282030}
+.vinyl-disc::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 30deg,#ffffff00 0deg,#ffffff23 48deg,#ffffff00 90deg,#ffffff00 178deg,#ffffff23 226deg,#ffffff00 265deg)}
+.vinyl-disc::after{content:"";position:absolute;width:29%;height:29%;left:35.5%;top:35.5%;border-radius:50%;background:radial-gradient(circle,#242520 0 3px,#d9c9a3 3.5px 100%);border:1px solid #c2b28c}
+.vinyl-sleeve{position:absolute;display:block;width:82%;aspect-ratio:1;top:0;left:0;background:#eeede0;border:1px solid #d2d1bd;box-shadow:2px 4px 10px #37422c20;overflow:hidden;transform:rotate(-3deg);transform-origin:50% 90%}
+.vinyl-sleeve::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 7px #ffffff17;pointer-events:none}
+.vinyl-sleeve img{width:100%;height:100%;object-fit:contain;background:#eee9df}
+.sleeve-orbit{position:absolute;display:block;right:-12%;top:7%;width:67%;aspect-ratio:1;border:1px solid #aeb496;border-radius:50%}
+.sleeve-orbit::after{content:"";position:absolute;inset:18%;border:1px solid #aeb496;border-radius:50%}
+.sleeve-caption{position:absolute;left:10%;top:17%;font-family:var(--serif);font-size:clamp(17px,3vw,31px);line-height:1.45;letter-spacing:-.035em;color:var(--olive);white-space:pre-line}
+.sleeve-caption em{font-family:Georgia,serif;font-size:1.22em;font-weight:400}
+.sleeve-label{position:absolute;left:10%;bottom:9%;font-family:var(--sans);font-size:8px;letter-spacing:.12em;color:var(--muted)}
+.vinyl-study-shelf{position:absolute;bottom:0;left:-4%;width:108%;height:12px;background:linear-gradient(#b5a383,#b5a383 5px,#948265 6px,#a08d6e);border-radius:2px;box-shadow:0 8px 8px #36402b19}
+.vinyl-scene .demo-trigger{margin-top:4px}
+.vinyl-scene .scene-bottom{margin-top:17px}
+.vinyl-hero-meta{display:flex;align-items:center;gap:23px;flex-wrap:wrap;padding-top:15px}
+.vinyl-hero-meta .text-link{margin-left:auto;font-size:11px}
+.vinyl-wall-section{padding:55px 0;border-bottom:1px solid var(--line)}
+.record-wall{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 28px;padding:48px 38px 24px;background:#e5e5d8;background-image:radial-gradient(#b5baa440 .6px,transparent .6px);background-size:9px 9px;border:1px solid #d2d5c2;border-radius:var(--radius);overflow:hidden;box-shadow:inset 0 1px 9px #3e492b09}
+.vinyl-slot{position:relative;min-width:0;padding:0 14px 28px}
+.vinyl-slot::after{content:"";position:absolute;bottom:5px;left:-14px;right:-14px;height:11px;background:linear-gradient(#b8a98a,#b8a98a 4px,#938366 5px,#a49373);box-shadow:0 9px 10px #45503715;border-radius:1px}
+.record-display{display:block;position:relative;width:100%;aspect-ratio:1.1;border:0;padding:0;background:none}
+.record-display .vinyl-disc{width:80%;top:2%}
+.record-display .vinyl-sleeve{width:82%}
+.record-display .sleeve-caption{font-size:clamp(17px,2.5vw,28px)}
+.record-display .sleeve-label{font-size:7px;letter-spacing:.07em}
+.vinyl-slot:nth-child(3n+2) .vinyl-sleeve{background:#d6dbc8;transform:rotate(2deg)}
+.vinyl-slot:nth-child(3n) .vinyl-sleeve{background:#e5d5c5;transform:rotate(-1deg)}
+.vinyl-slot:nth-child(3n) .sleeve-orbit,.vinyl-slot:nth-child(3n) .sleeve-orbit::after{border-color:#bfac95}
+.record-copy{position:relative;margin-top:8px;padding-left:27px;min-height:44px;overflow-wrap:anywhere}
+.record-number{position:absolute;left:0;top:2px;font-size:9px;color:var(--muted);letter-spacing:.06em}
+.record-copy h3{font-family:var(--serif);font-size:17px;line-height:1.6;margin:0 0 5px}
+.record-copy p{font-size:11px;line-height:1.8;color:var(--muted);margin:0}
+.record-copy .record-listening-note{font-size:10px;margin-top:8px}
+.is-empty .record-copy h3{font-family:var(--sans);font-size:11px;color:var(--muted);font-weight:400;line-height:2}
+.has-record .vinyl-sleeve,.has-record .vinyl-disc{transition:transform .25s}
+.has-record .record-display:hover .vinyl-sleeve{transform:rotate(-2deg) translateY(-4px)}
+.has-record .record-display:hover .vinyl-disc{transform:rotate(8deg)}
+.vinyl-empty-note{display:flex;align-items:flex-start;gap:18px;padding:30px 0 0}
+.vinyl-empty-note .tiny-cross{margin-top:6px}
+.vinyl-empty-note h3{font-family:var(--serif);font-size:21px;margin-bottom:10px}
+.vinyl-empty-note p{font-size:12px;line-height:2.1;color:var(--muted);margin:0}
+.vinyl-wall-note{font-size:10px;color:var(--muted);margin:20px 0 0}
+.vinyl-dialog #card-dialog-image{max-height:65vh;width:auto;margin-inline:auto;object-fit:contain}
+@media(max-width:820px){.vinyl-scene{padding:30px 22px}.vinyl-cover-study{margin-top:20px}.record-wall{padding:34px 20px 18px;gap:25px 18px}.vinyl-slot{padding-inline:7px}.vinyl-slot::after{left:-9px;right:-9px}.record-copy h3{font-size:15px}.record-display .sleeve-label{font-size:6px;letter-spacing:0}.vinyl-wall-section>.section-heading>.small-label{display:none}}
+@media(max-width:600px){.vinyl-project{margin-top:22px}.vinyl-scene{padding:30px 26px 25px}.vinyl-cover-study{max-width:310px}.vinyl-hero-meta{gap:15px}.vinyl-hero-meta .text-link{margin-left:0}.vinyl-wall-section{padding:35px 0}.record-wall{grid-template-columns:repeat(2,minmax(0,1fr));padding:30px 16px 15px;gap:25px 14px}.vinyl-slot{padding:0 5px 24px}.vinyl-slot::after{left:-7px;right:-7px;height:9px}.record-copy{padding-left:23px;margin-top:8px;min-height:34px}.record-number{font-size:8px}.record-copy h3{font-size:14px}.is-empty .record-copy h3{font-size:10px}.record-copy p{font-size:10px}.record-display .sleeve-caption{font-size:19px}.record-display .sleeve-label{font-size:5px}.vinyl-empty-note{padding-top:25px;gap:13px}.vinyl-empty-note h3{font-size:19px}.vinyl-empty-note p{font-size:11px}.vinyl-wall-note{font-size:9px;line-height:1.9}}
+@media(max-width:360px){.record-wall{padding:25px 12px 12px;column-gap:10px}.record-display .sleeve-caption{font-size:16px}.record-display .sleeve-label{font-size:4px}.record-copy{padding-left:20px}.is-empty .record-copy h3{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.has-record .vinyl-sleeve,.has-record .vinyl-disc{transition:none}.has-record .record-display:hover .vinyl-disc{transform:none}}
