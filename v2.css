@@ -61,3 +61,26 @@ dialog{color:var(--ink);border:0}dialog::backdrop{background:#111b;backdrop-filt
 .phone-graphic .scene-bottom{font-size:8px;color:#6c785d;margin-top:17px}
 .phone-graphic>span.scene-bottom{font-size:8px;font-weight:400;letter-spacing:0;line-height:1.8}
 @media(max-width:700px){.project-image.phone-graphic{height:390px;padding:26px 18px}}
+
+/* Original V1 illustration previews, kept separate from the real collection. */
+.v2-collection-art{display:flex;flex-direction:column;align-items:center;justify-content:center;max-width:700px;margin:0 auto 40px;padding:32px 24px;background:#dce2ce;color:#34442e;border-radius:6px;text-align:center;text-decoration:none;overflow:hidden}
+.art-eyebrow{font-size:9px;letter-spacing:.18em;line-height:1.8;color:#657455}
+.v2-collection-art>img{display:block;width:min(100%,460px);height:auto;margin:12px 0}
+.art-link{display:inline-block;padding:14px 22px;border:1px solid #a8b397;border-radius:28px;background:#f1f0e3;font-size:12px}
+.v2-collection-art:focus-visible{outline:3px solid var(--lime);outline-offset:4px}
+.vinyl-art{background:#d9ddce;min-height:460px}
+.vinyl-art .vinyl-cover-study{position:relative;width:min(100%,350px);aspect-ratio:1.2;margin:22px 0 18px}
+.vinyl-art .vinyl-disc{position:absolute;display:block;width:84%;aspect-ratio:1;right:0;top:2%;border-radius:50%;background:repeating-radial-gradient(circle at 50% 50%,#242520 0 1px,#35362f 1.5px 2px,#22231e 2.5px 4px);box-shadow:3px 6px 10px #25282030}
+.vinyl-art .vinyl-disc::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 30deg,#ffffff00 0deg,#ffffff23 48deg,#ffffff00 90deg,#ffffff00 178deg,#ffffff23 226deg,#ffffff00 265deg)}
+.vinyl-art .vinyl-disc::after{content:"";position:absolute;width:29%;height:29%;left:35.5%;top:35.5%;border-radius:50%;background:radial-gradient(circle,#242520 0 3px,#d9c9a3 3.5px 100%);border:1px solid #c2b28c}
+.vinyl-art .vinyl-sleeve{position:absolute;display:block;width:82%;aspect-ratio:1;top:0;left:0;background:#eeede0;border:1px solid #d2d1bd;box-shadow:2px 4px 10px #37422c20;overflow:hidden;transform:rotate(-3deg);transform-origin:50% 90%}
+.vinyl-art .vinyl-sleeve::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 7px #ffffff17;pointer-events:none}
+.vinyl-art .sleeve-orbit{position:absolute;display:block;right:-12%;top:7%;width:67%;aspect-ratio:1;border:1px solid #aeb496;border-radius:50%}
+.vinyl-art .sleeve-orbit::after{content:"";position:absolute;inset:18%;border:1px solid #aeb496;border-radius:50%}
+.vinyl-art .sleeve-caption{position:absolute;left:10%;top:17%;font-family:var(--serif);font-size:clamp(17px,3vw,31px);line-height:1.45;letter-spacing:-.035em;color:var(--olive);white-space:pre-line}
+.vinyl-art .sleeve-caption em{font-family:Georgia,serif;font-size:1.22em;font-weight:400}
+.vinyl-art .sleeve-label{position:absolute;left:10%;bottom:9%;font-family:var(--sans);font-size:8px;letter-spacing:.12em;color:var(--muted)}
+.vinyl-art .vinyl-study-shelf{position:absolute;bottom:0;left:-4%;width:108%;height:12px;background:linear-gradient(#b5a383,#b5a383 5px,#948265 6px,#a08d6e);border-radius:2px;box-shadow:0 8px 8px #36402b19}
+.vinyl-art .sleeve-caption{font-family:Georgia,serif;font-size:27px;color:#34442e}
+.vinyl-art .sleeve-label{color:#737c66}
+@media(max-width:600px){.v2-collection-art{padding:28px 18px;margin-bottom:30px}.vinyl-art{min-height:390px}.vinyl-art .vinyl-cover-study{width:min(100%,310px);margin:32px 0 24px}.vinyl-art .sleeve-caption{font-size:clamp(18px,5.5vw,26px)}}
