@@ -1,0 +1,14 @@
+/* V2 reuses V1's actual layout and sheet. Only the interactive hero is additional. */
+.hero-helmet{margin:0}
+.helmet-stage{position:relative;width:100%;aspect-ratio:1;touch-action:pan-y}
+.helmet-fallback,.helmet-canvas{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain}
+.helmet-canvas{opacity:0}
+.helmet-stage[data-state=ready] .helmet-canvas{opacity:1}
+.helmet-stage[data-state=ready] .helmet-fallback{visibility:hidden}
+.hero-helmet .art-caption{font-family:var(--sans);font-size:10px}
+.helmet-toggle{font:inherit;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--line);padding:5px 0;cursor:pointer}
+.helmet-toggle:hover{border-color:var(--olive)}
+/* Respect every photograph's own ratio, without fixed-height cropping. */
+.photo-visual>img{object-fit:contain}
+.photo-dialog>img{width:auto;height:auto;max-width:100%;object-fit:contain}
+@media(max-width:600px){.hero-helmet .art-caption{font-size:9px;flex-wrap:wrap;gap:10px}}

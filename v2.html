@@ -1,58 +1,95 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#d2ff00">
-  <title>樾 YUÈ — In All Ways.</title><meta name="description" content="樾的个人空间 V2。技术探索、上海摄影、兰多卡牌与黑胶唱片收藏，始终保持好奇。">
-  <link rel="icon" href="assets/mark.svg" type="image/svg+xml"><link rel="preload" href="assets/fonts/MonaSans.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/vendor/artalk/Artalk.css?v=2.10.0"><link rel="stylesheet" href="v2.css?v=tidy-20261002">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2eb">
+  <meta name="description" content="樾的个人空间：用技术探索生活，用摄影记录观察。项目、摄影与持续发生的好奇心。">
+  <title>樾 Yuè — V2 · 项目与观察</title>
+  <link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+  <link rel="stylesheet" href="assets/vendor/artalk/Artalk.css?v=2.10.0">
+  <link rel="stylesheet" href="styles.css?v=vinyl-covers-20261002">
+  <link rel="stylesheet" href="assets/v2-v1-layout.css?v=20261002">
   <script type="module" src="assets/helmet/helmet.js?v=20261002"></script>
-  <script src="content.js" defer></script><script src="vinyl-content.js?v=petal-20261002" defer></script><script src="v2.js?v=tidy-20261002" defer></script><script src="guestbook.js?v=guestbook-20261001" defer></script>
+  <script src="content.js?v=shanghai-five-20261001" defer></script>
+  <script src="app.js?v=shanghai-20261001" defer></script>
+  <script src="guestbook.js?v=guestbook-20261001" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
-  <header class="v2-header"><a class="v2-wordmark" href="v2.html" aria-label="樾 V2 首页"><span>YUÈ</span><strong>PERSONAL</strong></a><div class="v2-header-actions"><a class="v2-button" href="#records">收藏 ↗</a><button class="menu-toggle" type="button" data-menu-open aria-label="打开导航" aria-haspopup="dialog"><span></span><span></span></button></div></header>
+  <header class="site-header wrap">
+    <a class="wordmark" href="v2.html" aria-label="樾 V2 首页"><span class="brand-mark" aria-hidden="true">樾</span><span>YUÈ<span class="wordmark-small">A PERSONAL SPACE</span></span></a>
+    <nav aria-label="主要导航"><a href="#projects">项目</a><a href="#photography">摄影</a><a href="#about">关于我</a><a href="#guestbook">留言板</a></nav>
+    <a class="header-note" href="./">原版 V1 ↗</a>
+  </header>
   <main id="main">
-    <section class="v2-hero contours" aria-labelledby="hero-title">
-      <div class="hero-layout"><div class="hero-copy"><p class="hero-coordinate">樾的个人空间 / 2026</p>
-      <h1 id="hero-title"><span class="hero-serif">In all</span><span class="hero-heavy">WAYS<span class="lime-dot">.</span></span></h1>
-      <p class="hero-note">动手探索，认真记录。<br>这里收藏想法、照片，和一直喜欢的事物。</p></div>
-      <figure class="hero-helmet" aria-label="兰多赛车头盔互动展示">
+    <section class="hero wrap v2-hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tiny-cross" aria-hidden="true">✳</span> CURIOUS BY NATURE</p>
+        <h1 id="hero-title">保持好奇，<br>认真<span class="accent-word">记录。<svg viewBox="0 0 250 18" aria-hidden="true"><path d="M4 12C68 1 168 0 244 8M32 16C102 7 169 8 220 14"/></svg></span></h1>
+        <p class="hero-intro">我是<span data-content="name">樾</span>，一名喜欢动手做东西、也喜欢摄影的学生。<br class="desktop-break">这里收集我的项目、观察，以及还在发生的探索。</p>
+        <a class="button button-dark" href="#projects">看看我的探索 <span aria-hidden="true">↗</span></a>
+        <p class="hero-footnote">A small collection of things I make &amp; notice.</p>
+      </div>
+      <figure class="hero-art hero-helmet" aria-label="兰多赛车头盔互动展示">
+        <div class="art-label"><span>LANDO / HELMET</span><span>喜欢，也认真收藏</span></div>
         <div class="helmet-stage" data-helmet-stage>
           <img class="helmet-fallback" src="assets/helmet/fallback.png" alt="兰多·诺里斯赛车头盔" width="778" height="537" fetchpriority="high">
           <canvas class="helmet-canvas" aria-hidden="true"></canvas>
         </div>
-        <figcaption id="helmet-caption"><span class="helmet-instruction">移动鼠标，点亮头盔</span><button class="helmet-toggle" type="button" aria-pressed="false">查看完整头盔 ↗</button></figcaption>
-      </figure></div>
-      <div class="hero-bottom"><span class="hero-signature">YUÈ / 保持好奇</span><a href="#about" class="scroll-cue">向下探索 <span>↓</span></a></div>
+        <figcaption class="art-caption"><span class="helmet-instruction">移动鼠标，点亮头盔</span><button class="helmet-toggle" type="button" aria-pressed="false">查看完整头盔 ↗</button></figcaption>
+      </figure>
     </section>
-    <section id="about" class="v2-intro"><span class="v2-kicker">A MESSAGE FROM YUÈ</span><p class="intro-statement reveal">KEEP CURIOUS.<br>MAKE THINGS.<br><span>NOTICE MORE.</span></p><div class="intro-bottom"><span class="v2-monogram">Y↗</span><p>喜欢把生活里的小问题，变成值得动手试试的想法。<br>从一通电话、一张照片，到一份慢慢累积的收藏。<br>这里是我的个人空间，也是一份持续更新的记录。</p><a class="outline-button" href="#projects">看看我的探索 ↗</a></div></section>
-    <section id="projects" class="v2-projects">
-      <p class="section-label">01 / 项目探索</p>
-      <div class="v2-section-head"><h2><em>ON</em><br>MY MIND.</h2><p>把想法，变成能用的东西。</p></div>
-      <div class="project-pair"><a class="v2-project reveal" href="v2-phone-assistant.html"><div class="project-image phone-graphic"><span class="phone-ring">☎</span><span>ONE CALL.<br>A NEW CONNECTION.</span></div><div class="project-line"><span>01 / AI PHONE ASSISTANT</span><span>↗</span></div><h3>让 AI，接起一通电话。</h3><p>从学校公用电话拨入，用声音完成对话、查询与留言。</p></a><a class="v2-project reveal" href="v2-room-redesign.html"><div class="project-image"><img src="assets/room-study.svg" alt="房间设计概念插画，非实拍" width="640" height="490" loading="lazy"></div><div class="project-line"><span>02 / ROOM REDESIGN</span><span>↗</span></div><h3>让自己的房间，多一种可能。</h3><p>手机扫描真实空间，再用 AI 图像探索改造方案。</p></a></div>
+    <div class="section-divider wrap"><span>MADE WITH CURIOSITY</span><span>项目 / 摄影 / 观察</span><span aria-hidden="true">↓</span></div>
+
+    <section id="projects" class="section wrap" aria-labelledby="projects-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / THINGS I MAKE</p><h2 id="projects-title">把想法，变成能用的东西。</h2></div><p class="section-aside">从一个真实的问题开始，<br>边做，边理解。</p></div>
+      <article class="project-card">
+        <div class="project-copy"><div class="project-topline"><span class="pill">精选项目</span><span class="project-year">2026 — 持续迭代</span></div><h3>让 AI，<br>接起一通电话。</h3><p>不用打开 App，也不需要盯着屏幕。<br>从学校的公用电话拨入，与 AI 对话、查询信息，或给家人留一句话。</p><div class="tag-list"><span>AI 电话助手</span><span>语音交互</span><span>真实生活场景</span></div><a class="text-link" href="v2-phone-assistant.html">读这个项目的故事 <span aria-hidden="true">↗</span></a></div>
+        <div class="phone-scene"><span class="scene-note">ONE CALL. A NEW CONNECTION.</span><div class="phone-device" aria-hidden="true"><div class="phone-speaker"></div><div class="phone-display"><span class="device-label">AI PHONE ASSISTANT</span><strong>Lando</strong><div class="waveform"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="device-status">一通电话，开始对话。</span></div><div class="phone-keypad"><span>1<small>确认</small></span><span>2<small>ABC</small></span><span>3<small>DEF</small></span><span>4<small>GHI</small></span><span>5<small>JKL</small></span><span>6<small>MNO</small></span><span>7<small>PQRS</small></span><span>8<small>TUV</small></span><span>9<small>WXYZ</small></span><span>＊</span><span>0</span><span>＃</span></div></div><button class="demo-trigger" type="button" data-open-demo><span class="play-icon" aria-hidden="true">▶</span> 看看交互示意 <span aria-hidden="true">↗</span></button><span class="scene-bottom">原型已运行 · 仍在改进</span></div>
+      </article>
+      <article class="project-card room-project" aria-labelledby="room-project-title">
+        <div class="project-copy"><div class="project-topline"><span class="pill">设计探索</span><span class="project-year">2026 — 工作流记录</span></div><h3 id="room-project-title">让自己的房间，<br>多一种可能。</h3><p>用手机扫描真实空间，再通过 AI 图像探索改造方案。<br>从整体布局到书桌、床边细节，围绕同一方案反复调整。</p><div class="tag-list"><span>LiDAR / Polycam</span><span>AI 图像设计</span><span>生活空间改造</span></div><a class="text-link" href="v2-room-redesign.html">阅读完整工作流 <span aria-hidden="true">↗</span></a></div>
+        <div class="room-scene"><span class="scene-note">A SMALL ROOM. NEW POSSIBILITIES.</span><img class="room-illustration" src="assets/room-study.svg" alt="米白与橄榄绿的立体小房间概念插画，包含床、书桌、窗户和收纳柜" width="640" height="490"><a class="demo-trigger" href="v2-room-redesign.html"><span class="play-icon" aria-hidden="true">⌂</span> 看看设计工作流 <span aria-hidden="true">↗</span></a><span class="scene-bottom">空间设计 · 概念插画</span></div>
+      </article>
+      <article id="collections" class="project-card collection-project" aria-labelledby="collection-project-title">
+        <div class="project-copy"><div class="project-topline"><span class="pill">个人收藏</span><span class="project-year">LANDO NORRIS</span></div><h3 id="collection-project-title">把一份喜欢，<br>收藏在卡册里。</h3><p>兰多卡牌收藏，一张卡也是一个赛道上的瞬间。<br>用卡面、系列与编号，慢慢整理自己的收藏记录。</p><div class="tag-list"><span>兰多 · Lando Norris</span><span>赛车卡牌</span><span>个人收藏册</span></div><a class="text-link" href="lando-collection.html">打开我的收藏册 <span aria-hidden="true">↗</span></a></div>
+        <div class="collection-scene"><span class="scene-note">SMALL CARDS. BIG FEELINGS.</span><img class="collection-illustration" src="assets/card-study.svg" alt="原创兰多收藏主题插画：三张交叠的赛车卡牌与抽象头盔，不是实体卡实拍" width="580" height="500"><a class="demo-trigger" href="lando-collection.html"><span class="play-icon" aria-hidden="true">▤</span> 看看兰多收藏册 <span aria-hidden="true">↗</span></a><span class="scene-bottom">7 张卡面已收录 · 主题插画</span></div>
+      </article>
+      <article id="records" class="project-card vinyl-project" aria-labelledby="vinyl-project-title">
+        <div class="project-copy"><div class="project-topline"><span class="pill">听觉收藏</span><span class="project-year">MY RECORD WALL</span></div><h3 id="vinyl-project-title">让喜欢的声音，<br>也有一面墙。</h3><p>一张封面，一段旋律。<br>给慢慢收集的黑胶唱片，留一个可以翻看的角落。</p><div class="tag-list"><span>黑胶唱片</span><span>专辑封面</span><span>聆听记录</span></div><a class="text-link" href="vinyl-wall.html">打开黑胶展示墙 <span aria-hidden="true">↗</span></a></div>
+        <div class="vinyl-scene"><span class="scene-note">A PLACE FOR THE RECORDS I LOVE.</span><div class="vinyl-cover-study" aria-hidden="true"><span class="vinyl-disc"></span><span class="vinyl-sleeve"><span class="sleeve-orbit"></span><span class="sleeve-caption">A SMALL<br>LISTENING<br><em>corner.</em></span><span class="sleeve-label">RECORDS / IN PROGRESS</span></span><span class="vinyl-study-shelf"></span></div><a class="demo-trigger" href="vinyl-wall.html"><span class="play-icon" aria-hidden="true">◎</span> 看看我的唱片墙 <span aria-hidden="true">↗</span></a><span class="scene-bottom">6 张唱片已收录</span></div>
+      </article>
     </section>
-    <section id="photography" class="v2-photos">
-      <p class="section-label">02 / 上海摄影</p>
-      <div class="v2-section-head"><h2><em>IN</em><br>FRAME.</h2><p>上海之行。<br>暮色、天际线，与街边的一次停留。</p></div>
-      <div id="v2-photo-grid" class="v2-photo-grid"></div><noscript><p>开启 JavaScript 查看五张摄影作品。</p></noscript>
-      <p class="section-endnote">点击照片，查看完整画面。</p>
+
+    <section id="photography" class="section wrap" aria-labelledby="photography-title">
+      <div class="section-heading"><div><p class="eyebrow">02 / THINGS I NOTICE</p><h2 id="photography-title">上海之行。</h2></div><p class="section-aside">日落、天际线，与街边橱窗。<br>从城市天际线，走到愚园路。</p></div>
+      <div class="gallery-toolbar"><div class="filter-list" role="group" aria-label="摄影系列筛选"><button type="button" class="is-active" data-filter="all" aria-pressed="true">全部</button><button type="button" data-filter="shanghai" aria-pressed="false">上海之行</button></div><p class="gallery-status" id="gallery-status" role="status">摄影作品整理中</p></div>
+      <div class="preview-tools" hidden><p><strong>试放你的照片</strong><span>仅在当前浏览器预览，不会上传；刷新后恢复已发布的照片。</span></p><button type="button" class="text-link" data-reset-photos>恢复已发布照片 ↺</button></div>
+      <div class="gallery" id="photo-gallery"></div>
+      <p class="gallery-note"><span aria-hidden="true">↳</span> 《上海之行》 · 5 张摄影作品。点击照片，查看完整画面。</p>
     </section>
-    <section id="collections" class="v2-collections">
-      <p class="section-label">03 / 兰多卡册</p>
-      <div class="v2-section-head"><h2>HALL OF<br><em>FAVORITES.</em></h2><div><p>小小卡片，装下大大的喜欢。</p><span id="v2-card-count" class="v2-count">卡册整理中</span></div></div>
-      <div class="collection-control"><span>滑动，翻看下一张 →</span><div><button type="button" data-card-scroll="-1" aria-label="上一组卡牌">←</button><button type="button" data-card-scroll="1" aria-label="下一组卡牌">→</button></div></div>
-      <div id="v2-card-track" class="v2-card-track" role="region" aria-label="兰多卡牌收藏" tabindex="0"><p id="v2-card-status" role="status">正在翻开卡册……</p></div>
-      <div class="collection-bottom"><p>点击卡面放大，展开资料查看版别与记录。</p><a class="outline-button" href="assets/documents/lando-seven-details-20261002.zip" download>下载七张实拍 ↓</a></div>
+
+    <section id="about" class="section wrap about-section" aria-labelledby="about-title">
+      <div class="about-head"><p class="eyebrow">03 / THE PERSON BEHIND IT</p><h2 id="about-title">你好，<br>我是<span data-content="name">樾</span><span class="accent">。</span></h2><span class="about-signature" aria-hidden="true">Still figuring things out.</span></div>
+      <div class="about-copy"><p class="about-lead">喜欢把生活里的小问题，<br>变成值得动手试试的想法。</p><p>我现在是一名高中生。喜欢摄影，也对技术能怎样融入日常生活感到好奇。一个电话助手、一张照片，都是我理解世界的一种方式。</p><p>这个网站不是一份已经完成的答案，而是一份持续更新的记录。接下来，我想继续学习、尝试，把真正关心的事情做得更好。</p><div class="interest-list"><span>动手探索</span><span>摄影与观察</span><span>保持好奇</span></div><div class="next-note"><span class="tiny-cross" aria-hidden="true">✳</span><div><strong>接下来的一小步</strong><p>继续记录新的摄影作品，为电话助手留下更完整的项目记录，也慢慢整理兰多卡牌收藏。</p></div></div></div>
     </section>
-    <section id="records" class="v2-records">
-      <p class="section-label">04 / 黑胶唱片</p>
-      <div class="v2-section-head"><h2><em>ON</em><br>REPEAT.</h2><div><p>封面朝外，声音在里面。</p><span id="v2-record-count" class="v2-count">唱片整理中</span></div></div>
-      <div id="v2-record-grid" class="v2-record-grid"></div><noscript><p>开启 JavaScript 查看黑胶展示墙。</p></noscript>
-      <p class="section-endnote">点击封面，查看完整画面与版本。</p>
+    <section id="guestbook" class="section wrap guestbook-section" aria-labelledby="guestbook-title">
+      <div class="section-heading"><div><p class="eyebrow">04 / A NOTE FROM YOU</p><h2 id="guestbook-title">路过的话，留句话。</h2></div><p class="section-aside">一个想法、一句招呼，<br>或聊聊我们共同的喜欢。</p></div>
+      <div class="guestbook-intro"><span class="pill">公开留言 · 无需注册</span><p>填个昵称就能写，也可以回复和点赞。很高兴在这里遇见你。</p></div>
+      <div class="guestbook-panel">
+        <p id="guestbook-status" class="guestbook-status" role="status">正在翻开留言本……</p>
+        <button id="guestbook-retry" class="text-link" type="button" hidden>重新连接 ↻</button>
+        <div id="guestbook-comments" aria-label="留言与回复"></div>
+        <noscript><p class="guestbook-status">开启浏览器的 JavaScript，就能查看和留下留言。</p></noscript>
+      </div>
+      <p class="guestbook-footnote">写下的话会公开展示。昵称不代表已验证身份，友善交流就好。</p>
     </section>
-    <section id="guestbook" class="v2-guestbook" aria-labelledby="guestbook-title"><p class="section-label">05 / 留言板</p><div class="v2-section-head"><h2 id="guestbook-title">SAY<br><em>HELLO.</em></h2><p>路过的话，留句话。<br>填个昵称就能写，无需注册。</p></div><div class="guestbook-panel"><p id="guestbook-status" role="status">正在翻开留言本……</p><button id="guestbook-retry" class="outline-button" type="button" hidden>重新连接 ↻</button><div id="guestbook-comments" aria-label="留言与回复"></div><noscript><p>开启 JavaScript 查看和留下留言。</p></noscript></div><p class="section-endnote">写下的话会公开展示，友善交流就好。</p></section>
+    <section class="closing wrap" aria-label="结束语"><p>还有很多想法，<br>等着慢慢发生。</p><a class="circle-link" href="#main" aria-label="回到顶部">↑</a></section>
   </main>
-  <footer class="v2-footer contours"><p>ALWAYS<br><em>CURIOUS.</em></p><div class="footer-line"><a class="v2-wordmark" href="#main"><span>YUÈ</span><strong>PERSONAL</strong></a><span>© <span data-v2-year>2026</span> YUÈ / A PERSONAL SPACE</span><a href="./">打开原版 V1 ↗</a><a href="#main" aria-label="回到顶部">↑ TOP</a></div></footer>
-  <dialog id="v2-menu" class="v2-menu" aria-labelledby="menu-title"><div class="menu-top"><h2 id="menu-title">EXPLORE</h2><button type="button" data-menu-close aria-label="关闭导航">×</button></div><nav aria-label="V2 主要导航"><a href="#projects"><small>01</small>ON MY MIND <span>项目 ↗</span></a><a href="#photography"><small>02</small>IN FRAME <span>摄影 ↗</span></a><a href="#collections"><small>03</small>FAVORITES <span>卡册 ↗</span></a><a href="#records"><small>04</small>ON REPEAT <span>黑胶 ↗</span></a><a href="#guestbook"><small>05</small>SAY HELLO <span>留言 ↗</span></a></nav><a class="menu-v1" href="./">原版 V1 ↗</a></dialog>
-  <dialog id="v2-lightbox" class="v2-lightbox" aria-labelledby="v2-lightbox-title"><div class="lightbox-header"><h2 id="v2-lightbox-title">完整画面</h2><button type="button" data-lightbox-close aria-label="关闭大图">×</button></div><img id="v2-lightbox-image" alt=""><p id="v2-lightbox-caption"></p></dialog>
-</body></html>
+  <footer class="site-footer wrap"><a href="v2.html" class="footer-name">樾 / YUÈ</a><p>项目、摄影，以及生活里的好奇心。 · <a href="./">原版 V1 ↗</a></p><span>© <span data-year>2026</span> Yuè</span></footer>
+
+  <dialog id="demo-dialog" class="dialog demo-dialog" aria-labelledby="demo-title"><div class="dialog-header"><span class="eyebrow">AN INTERACTION SKETCH</span><button class="icon-button" type="button" data-close-dialog aria-label="关闭交互示意">×</button></div><h2 id="demo-title">一通电话，可以怎么开始？</h2><p class="dialog-intro">以下是编写的交互示意，不是真实通话录音，也不会拨号或发送消息。</p><ol class="demo-steps"><li><span class="step-number">01</span><div><strong>拨入电话</strong><p>接通后，听到 AI 的语音欢迎。</p></div></li><li><span class="step-number">02</span><div><strong>说出你的请求</strong><p>“请帮我给家人留一句话。”</p></div></li><li><span class="step-number">03</span><div><strong>复述，再确认</strong><p>AI 读回拟发送内容，等待按键确认。</p></div></li><li><span class="step-number">04</span><div><strong>把声音，变成连接</strong><p>确认后的留言通过已配置的渠道送达。</p></div></li></ol><a class="button button-dark" href="v2-phone-assistant.html">了解项目与限制 <span aria-hidden="true">↗</span></a></dialog>
+  <dialog id="photo-dialog" class="dialog photo-dialog" aria-labelledby="photo-dialog-title"><div class="dialog-header"><h2 id="photo-dialog-title">摄影作品</h2><button class="icon-button" type="button" data-close-dialog aria-label="关闭照片">×</button></div><img id="photo-dialog-image" alt=""><p id="photo-dialog-caption"></p></dialog>
+</body>
+</html>
