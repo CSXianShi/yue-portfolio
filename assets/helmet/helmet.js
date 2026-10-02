@@ -75,8 +75,9 @@ async function init() {
   headScene.add(head);
   scene.remove(rig);
   yuePortrait.colorSpace = THREE.SRGBColorSpace;
-  const yue = new THREE.Mesh(new THREE.PlaneGeometry(3.4, 3.4 * 512 / 413), new THREE.MeshBasicMaterial({ map: yuePortrait, transparent: true }));
-  yue.position.y = -.45;
+  const yue = new THREE.Mesh(new THREE.PlaneGeometry(2.79, 2.79 * 512 / 413), new THREE.MeshBasicMaterial({ map: yuePortrait, transparent: true }));
+  // Align eye line and face center with Lando for the fluid transition.
+  yue.position.set(-.14, -1.15, 0);
   scene.add(yue);
   const helmetTarget = new THREE.WebGLRenderTarget(1, 1, { depthBuffer: true });
   const headTarget = new THREE.WebGLRenderTarget(1, 1, { depthBuffer: false });
@@ -103,7 +104,8 @@ async function init() {
         vec3 paper = vec3(.904,.904,.857);
         vec3 background = mix(paper, vec3(.807,.819,.775), cursorEffect * .18);
         vec3 base = mix(background, portrait.rgb, portrait.a);
-        gl_FragColor = vec4(mix(base, helmet.rgb, cursorEffect * helmet.a), 1.0);
+        vec3 revealed = mix(background, helmet.rgb, helmet.a);
+        gl_FragColor = vec4(mix(base, revealed, cursorEffect), 1.0);
         #include <colorspace_fragment>
       }
     `,
