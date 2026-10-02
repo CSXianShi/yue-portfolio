@@ -7,9 +7,9 @@
     "subset": "Lights Out 主卡",
     "cardNumber": "系列清单无卡号",
     "parallel": "Base 普卡（初步识别）",
-    "description": "以深色星空、行星与兰多的迈凯伦车手肖像构成卡面；对应 2026 Lights Out 的主卡主题。照片未见明显彩色平行特征，暂按 Base 记录，明天细拍后复核。",
-    "note": "默认显示用户选用的 AI 增强预览，部分细节可能经过重绘，不用于判断卡面印刷或品相；可切换到实拍裁切。具体平行版本与限编仍待卡背核对。",
-    "image": "assets/cards/lando-lights-out-front.png",
+    "description": "以深色星空、行星与兰多的迈凯伦车手肖像构成卡面；对应 2026 Lights Out 的主卡主题。新增 10 月 2 日细拍，保留原图反光；暂按 Base 记录，具体平行版本仍待卡背确认。",
+    "note": "保留用户选用的 AI 增强预览，部分细节可能经过重绘，不用于判断卡面印刷或品相；可切换到 10 月 2 日高清实拍。具体平行版本与限编仍待卡背核对。",
+    "image": "assets/cards/lando-lights-out-detail-20261002.jpg",
     "sources": [
       {
         "label": "Topps 官方 · Lights Out 2026",
@@ -21,7 +21,14 @@
       }
     ],
     "previewImage": "assets/cards/lando-lights-out-ai-preview.png",
-    "previewImageKind": "AI增强预览"
+    "previewImageKind": "AI增强预览",
+    "originalCropImage": "assets/cards/lando-lights-out-front.png",
+    "imageDimensions": [
+      2132,
+      3008
+    ],
+    "photoDate": "2026-10-02",
+    "imageOrigin": "用户提供的 GRAND PRIX.pdf 内嵌 JPEG；原像素提取，仅移除 EXIF/IPTC 元数据，未再次增强或重绘。"
   },
   {
     "id": "grand-prix-left",
@@ -31,9 +38,9 @@
     "subset": "Grand Prix Driver of the Day",
     "cardNumber": "#132（清单匹配，待卡背确认）",
     "parallel": "Base（普卡）",
-    "description": "2025 Topps Chrome F1 的 Grand Prix Driver of the Day 主题，记录 2024 奥地利大奖赛。用户提供的购入商品描述为“黑白棋盘折＋base”两张打包，这张对应 Base 普卡，而不是黑白激光折。",
+    "description": "2025 Topps Chrome F1 的 Grand Prix Driver of the Day 主题，记录 2024 奥地利大奖赛。购入描述为“黑白棋盘折＋base”两张打包，这张对应 Base 普卡。10 月 2 日细拍保留卡面几何背景与保护套反光。",
     "note": "卡面上的 2024 是比赛年份，不是发行年份。#132 由同卡面与清单匹配，仍待卡背确认。",
-    "image": "assets/cards/lando-grand-prix-left-front.png",
+    "image": "assets/cards/lando-grand-prix-base-detail-20261002.jpg",
     "sources": [
       {
         "label": "2025 Chrome 系列与平行清单",
@@ -45,7 +52,14 @@
       }
     ],
     "identification": "按购入描述核对",
-    "confirmation": "用户提供的购入商品描述：黑白棋盘折＋base（2026-10-01）"
+    "confirmation": "用户提供的购入商品描述：黑白棋盘折＋base（2026-10-01）",
+    "originalCropImage": "assets/cards/lando-grand-prix-left-front.png",
+    "imageDimensions": [
+      2316,
+      3304
+    ],
+    "photoDate": "2026-10-02",
+    "imageOrigin": "用户提供的 GRAND PRIX.pdf 内嵌 JPEG；原像素提取，仅移除 EXIF/IPTC 元数据，未再次增强或重绘。"
   },
   {
     "id": "grand-prix-right",
@@ -55,9 +69,9 @@
     "subset": "Grand Prix Driver of the Day",
     "cardNumber": "#132（清单匹配，待卡背确认）",
     "parallel": "黑白棋盘折 · Checker Flag",
-    "description": "与 Base 是同一张 Driver of the Day 卡面，增加了棋盘方格的折射纹理。购入商品描述称“黑白棋盘折”；2025 Chrome 清单中的对应平行名称为 Checker Flag。原片的闪面与反光保留。",
-    "note": "版别按用户提供的购入描述记录；#132 与具体限编仍待卡背确认，不据照片推断品相。",
-    "image": "assets/cards/lando-grand-prix-right-front.png",
+    "description": "与 Base 是同一张 Driver of the Day 卡面，增加了棋盘方格的折射纹理。购入描述称“黑白棋盘折”；10 月 2 日细拍可见明显格状闪面，与 Checker Flag 纹理相符。原图的彩色折射与反光保留。",
+    "note": "购入描述与正面格纹相符；#132 与具体限编仍待卡背确认，不据保护套反光推断品相。",
+    "image": "assets/cards/lando-grand-prix-checker-detail-20261002.jpg",
     "sources": [
       {
         "label": "2025 Chrome 系列与平行清单",
@@ -68,7 +82,14 @@
         "url": "https://www.beckett.com/news/2025-topps-chrome-formula-1-racing-cards/"
       }
     ],
-    "identification": "按购入描述核对",
-    "confirmation": "用户提供的购入商品描述：黑白棋盘折＋base（2026-10-01）"
+    "identification": "购入描述与卡面格纹相符",
+    "confirmation": "用户提供的购入商品描述：黑白棋盘折＋base（2026-10-01）；2026-10-02 细拍正面显示棋盘格折射纹理",
+    "originalCropImage": "assets/cards/lando-grand-prix-right-front.png",
+    "imageDimensions": [
+      2392,
+      3368
+    ],
+    "photoDate": "2026-10-02",
+    "imageOrigin": "用户提供的 GRAND PRIX.pdf 内嵌 JPEG；原像素提取，仅移除 EXIF/IPTC 元数据，未再次增强或重绘。"
   }
 ]

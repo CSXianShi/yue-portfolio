@@ -25,8 +25,11 @@
       opener.dataset.cardSrc = versionButton.dataset.image;
       opener.dataset.cardImageKind = kind;
       opener.setAttribute("aria-label", `放大查看：${opener.dataset.cardTitle}，${kind}`);
-      opener.querySelector("img").src = versionButton.dataset.image;
-      opener.querySelector("img").alt = `${opener.dataset.cardTitle}，${kind}`;
+      const cardImage = opener.querySelector("img");
+      cardImage.src = versionButton.dataset.image;
+      cardImage.alt = `${opener.dataset.cardTitle}，${kind}`;
+      cardImage.width = Number(versionButton.dataset.imageWidth);
+      cardImage.height = Number(versionButton.dataset.imageHeight);
       opener.querySelector(".card-image-kind").textContent = kind;
       card.querySelectorAll("[data-card-version]").forEach(button => {
         const active = button === versionButton;
