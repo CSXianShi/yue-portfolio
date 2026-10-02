@@ -36,7 +36,7 @@ async function init() {
   draco.setWorkerLimit(1);
   const loader = new GLTFLoader().setDRACOLoader(draco);
   const textures = new THREE.TextureLoader();
-  const [gltf, base, normal, visor, roughness, metallic, environment, headDiffuse, headAlpha] = await Promise.all([
+  const [gltf, base, normal, visor, roughness, metallic, environment, headDiffuse] = await Promise.all([
     loader.loadAsync(url('lando-helmet.glb')),
     textures.loadAsync(url('gold-base.webp')),
     textures.loadAsync(url('normal.webp')),
@@ -44,8 +44,7 @@ async function init() {
     textures.loadAsync(url('visor-roughness.webp')),
     textures.loadAsync(url('visor-metallic.webp')),
     new HDRLoader().loadAsync(url('studio.hdr')),
-    textures.loadAsync(url('head-diffuse.webp')),
-    textures.loadAsync(url('head-alpha.webp')),
+    textures.loadAsync(url('yue-portrait.webp')),
   ]);
   draco.dispose();
   base.colorSpace = visor.colorSpace = THREE.SRGBColorSpace;
@@ -69,7 +68,7 @@ async function init() {
   headDiffuse.colorSpace = THREE.SRGBColorSpace;
   const fluid = new FluidCursor(renderer);
   const headScene = new THREE.Scene();
-  const head = new THREE.Mesh(new THREE.PlaneGeometry(4.2, 4.2), new THREE.MeshBasicMaterial({ map: headDiffuse, alphaMap: headAlpha, transparent: true }));
+  const head = new THREE.Mesh(new THREE.PlaneGeometry(3.4, 3.4 * 512 / 413), new THREE.MeshBasicMaterial({ map: headDiffuse, transparent: true }));
   head.position.y = -.45;
   headScene.add(head);
   const helmetTarget = new THREE.WebGLRenderTarget(1, 1, { depthBuffer: true });
