@@ -20,7 +20,18 @@
   if(lightbox){document.addEventListener('click',e=>{const b=e.target.closest('[data-v2-image]');if(b)openImage(b);});$('[data-lightbox-close]').addEventListener('click',()=>lightbox.close());lightbox.addEventListener('click',e=>{if(e.target!==lightbox)return;const r=lightbox.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)lightbox.close();});lightbox.addEventListener('close',()=>{document.body.classList.remove('modal-open');$('#v2-lightbox-image').removeAttribute('src');previousFocus?.focus({preventScroll:true});});}
   function imageButton(src,title,caption,cls,width,height){const b=make('button',cls);b.type='button';b.dataset.v2Image='';b.dataset.src=src;b.dataset.title=title;b.dataset.caption=caption;b.setAttribute('aria-label','放大查看：'+title);const img=make('img');img.src=src;img.alt=title;img.loading='lazy';if(width)img.width=width;if(height)img.height=height;b.append(img);return b;}
   const photos=$('#v2-photo-grid');
-  if(photos)for(const p of window.PORTFOLIO_CONTENT?.photos||[]){const item=make('article');const b=imageButton(p.image,p.title,p.caption,'',1200,900);const cap=make('div','photo-caption');cap.append(make('span','',p.subtitle),make('span','','↗'));b.append(cap);item.append(b);photos.append(item);}
+  if (photos) for (const p of window.PORTFOLIO_CONTENT?.photos || []) {
+    const item = make('article', 'v1-photo-card');
+    const b = imageButton(p.image, p.title, p.caption, 'v1-photo-visual');
+    b.style.aspectRatio = p.aspectRatio || '4 / 3';
+    b.querySelector('img').alt = p.alt || p.title;
+    const meta = make('div', 'photo-caption');
+    const copy = make('div');
+    copy.append(make('h3', '', p.title), make('p', '', p.subtitle));
+    meta.append(copy, make('span', 'photo-number', p.number));
+    item.append(b, meta);
+    photos.append(item);
+  }
   const records=$('#v2-record-grid');
   if(records){const data=window.VINYL_CONTENT?.records||[];for(const r of data){const item=make('article','v2-record-item');item.append(imageButton(r.cover,r.title,[r.artist,r.note].filter(Boolean).join(' · '),'v2-record-image',r.width||1000,r.height||1000));item.append(make('h3','',r.title),make('p','',r.artist),make('span','record-version',r.note));if(r.source?.startsWith('https://')){const details=make('details','record-details');details.append(make('summary','','版本与来源'));const a=make('a','record-source','查看官方封面来源 ↗');a.href=r.source;a.target='_blank';a.rel='noopener noreferrer';details.append(make('p','',r.identification||r.note),a);item.append(details);}records.append(item);}$('#v2-record-count').textContent=data.length+' 张唱片';if(window.VINYL_CONTENT?.pending){const item=make('article','record-pending');item.append(make('strong','','下一张，正在核对。'),make('p','','黑白笑脸封面的专辑名与版本待确认。'));records.append(item);}}
   const track=$('#v2-card-track');
